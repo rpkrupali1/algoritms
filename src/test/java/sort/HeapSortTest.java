@@ -93,7 +93,7 @@ public class HeapSortTest extends ParentTest {
     @Test
     public void test009() {
         Heap heap = new Heap();
-        ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(-1, -2, -3, -4));
+        ArrayList<Integer> input = new ArrayList<>(Arrays.asList(-1, -2, -3, -4));
         ArrayList<Integer> output = heap.heap_sort(input);
         printTest(output);
         isSorted(output);
