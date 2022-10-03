@@ -5,9 +5,10 @@ import java.util.ArrayList;
 /**
  * Bubble sort:
  * Repeatedly swapping the adjacent elements if they are in the wrong order
- * Design Strategy - brute force
+ * Design Strategy - Brute force
  * Not suitable for large data sets
- * Complexity - Worst case = average case = O(n square)
+ * Complexity - Worst case = average case = O(n ^2)
+ * Space Complexity -
  */
 public class Bubble {
     public ArrayList<Integer> bubble_sort(ArrayList<Integer> arr){

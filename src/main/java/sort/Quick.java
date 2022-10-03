@@ -11,6 +11,8 @@ import java.util.ArrayList;
  * 4)Median
  * Design Strategy - Divide and Conquer
  * Complexity - Worst case = O(n^2) average case = O (n log n)
+ * Space complexity - O(1)
+ * Best sorting algorithm
  */
 public class Quick {
 
