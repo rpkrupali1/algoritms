@@ -10,8 +10,8 @@ import java.util.ArrayList;
  * 3)Random element -Naive Partition
  * 4)Median
  * Design Strategy - Divide and Conquer
- * Time Complexity -  Ω ( n log n), Θ ( n log n),O ( n ^ 2 )
- * Space complexity - O(1)
+ * Time Complexity -  Ω(n log(n)), Θ(n log(n)), O(n^2 )
+ * Space complexity - O(1), O(log(n))
  * Best sorting algorithm
  */
 public class Quick {

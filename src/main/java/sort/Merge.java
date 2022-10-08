@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * If the array has multiple elements split the array into halves, recursively invoke merge sort on each half
  * When both halves are sorted then combine
  * Design Strategy - Divide and Conquer
- * Complexity -o(n log n)
+ * Time Complexity -  Ω(n log(n)), Θ(n log(n)), O(n log(n))
  * space complexity - O(n)
  * Recurrence relation - T(n) = 2.T(n/2) + o (n log n)
  */

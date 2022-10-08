@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * Locate the smallest item and put it into first place and then select the next smallest item and put it in second place . And so on..
  * Sorting by repeated selection is "Selection Sort"
  * Design Strategy - Brute force
- * Complexity - o(n^2)
+ * Time Complexity -  Ω(n^2), Θ(n^2), O(n^2)
  * Space complexity = O(1)
  */
 public class Selection {

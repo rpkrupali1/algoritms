@@ -8,7 +8,8 @@ import java.util.ArrayList;
  * Array is split into sorted and unsorted array. Values from unsorted part are picked and placed at correct position in sorted array
  * Design Strategy - Decrease and conquer
  * Efficient for - small data sets, already partially sorted arrays
- * Complexity - o(n^2)
+ * Time Complexity -  Ω(n), Θ((n^2)), O((n^2))
+ * Space Complexity - O(1)
  */
 public class Insertion {
     public ArrayList<Integer> insertion_sort(ArrayList<Integer> arr){
