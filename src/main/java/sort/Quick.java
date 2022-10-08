@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * 3)Random element -Naive Partition
  * 4)Median
  * Design Strategy - Divide and Conquer
- * Complexity - Worst case = O(n^2) average case = O (n log n)
+ * Time Complexity -  Ω ( n log n), Θ ( n log n),O ( n ^ 2 )
  * Space complexity - O(1)
  * Best sorting algorithm
  */
