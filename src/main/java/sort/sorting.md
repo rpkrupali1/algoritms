@@ -53,4 +53,15 @@ When two same data appear in different order in sorted data then it is called as
 ## Sorting Algorithms
 
 ### Selection Sort
-Sort by finding minimum element and putting in the beginning and then repeat the process
+Sort by finding the smallest element and putting in the beginning and then repeat the process.
+Sorting by repeated selection is "Selection Sort".
+- Design Strategy - `Brute Force`
+- Stability - Default implementation is `not stable`. However, it can be made stable. 
+- Time complexity - **Ω(n<sup>2</sup>)**, **Θ(n<sup>2</sup>)**, **O(n<sup>2</sup>)** 
+
+#### Pseudo Code and complexity 
+
+![](../../../images/Selection_sort_pseudo_code.png)
+
+#### Logic Execution
+![](../../../images/selection_sort.png)
