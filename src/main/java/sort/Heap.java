@@ -2,16 +2,16 @@ package sort;
 
 import java.util.ArrayList;
 
-/*
-Heap sort is a comparison based sorting technique based on Binary Heap data structure.
-It is similar to selection sort where we first find the maximum element and place the maximum element at the end.
-We repeat the same process for remaining element.
-Heap sort is in-place algorithm.
-Typical implementation is not stable but can be made stable
-Slower than Quick sort or Merge sort
-Design Strategy - Transform and conquer
-complexity - O(nlog n)
-Spce Complexity - O(n)
+/**
+* Heap sort is a comparison based sorting technique based on Binary Heap data structure.
+* It is similar to selection sort where we first find the maximum element and place the maximum element at the end.
+* We repeat the same process for remaining element.
+* Heap sort is in-place algorithm.
+* Typical implementation is not stable but can be made stable
+* Slower than Quick sort or Merge sort
+* Design Strategy - Transform and conquer
+* Time Complexity -  Ω(n log(n)), Θ(n log(n)), O(n log(n))
+* Space Complexity - O(1)
 Steps:
 1) Heapify
 2) One by one delete the root node and replace with last leaf node and then heapify

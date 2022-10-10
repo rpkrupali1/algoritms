@@ -7,8 +7,8 @@ import java.util.ArrayList;
  * Repeatedly swapping the adjacent elements if they are in the wrong order
  * Design Strategy - Brute force
  * Not suitable for large data sets
- * Complexity - Worst case = average case = O(n ^2)
- * Space Complexity -
+ * Time Complexity -  Ω(n), Θ(n^2), O(n^2)
+ * Space Complexity - O(1)
  */
 public class Bubble {
     public ArrayList<Integer> bubble_sort(ArrayList<Integer> arr){
