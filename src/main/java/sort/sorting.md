@@ -57,7 +57,9 @@ Sort by finding the smallest element and putting in the beginning and then repea
 Sorting by repeated selection is "Selection Sort".
 - Design Strategy - `Brute Force`
 - Stability - Default implementation is `not stable`. However, it can be made stable. 
+- `In Place` algorithm
 - Time complexity - **Ω(n<sup>2</sup>)**, **Θ(n<sup>2</sup>)**, **O(n<sup>2</sup>)** 
+- Space Complexity - O(1) As the only extra space is used for temporary variables while swapping
 
 #### Pseudo Code and complexity 
 
@@ -65,3 +67,18 @@ Sorting by repeated selection is "Selection Sort".
 
 #### Logic Execution
 ![](../../../images/selection_sort.png)
+
+
+### Bubble Sort
+Works by repeatedly swapping adjacent elements if they are not in correct order.
+This algorithm is not suitable for large data sets as its average and worst-case time complexity is quite high.
+- Design Strategy - `Brute Force`
+- `Stable` algorithm
+- `In Place` algorithm
+- Time complexity - **Ω(n<sup>2</sup>)**, **Θ(n<sup>2</sup>)**, **O(n<sup>2</sup>)**
+- Space Complexity - O(1) As the only extra space is used for temporary variables while swapping
+
+#### Pseudo Code and complexity 
+
+#### Logic Execution
+![](../../../images/bubble_sort_correct.png)

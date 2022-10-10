@@ -13,6 +13,7 @@ public class BubbleSortTest extends ParentTest {
         Bubble sort = new Bubble();
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(5, 8, 3, 9, 4, 1, 7));
         ArrayList<Integer> output = sort.bubble_sort(input);
+        System.out.print("Actual Output: ");
         printTest(output);
         Assert.assertTrue(isSorted(output));
     }
