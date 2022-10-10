@@ -80,5 +80,7 @@ This algorithm is not suitable for large data sets as its average and worst-case
 
 #### Pseudo Code and complexity 
 
+![](../../../images/bubble_sort_pseudo.png)
+
 #### Logic Execution
 ![](../../../images/bubble_sort_correct.png)
