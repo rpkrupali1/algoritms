@@ -71,6 +71,7 @@ Sorting by repeated selection is "Selection Sort".
 
 ### Bubble Sort
 Works by repeatedly swapping adjacent elements if they are not in correct order.
+
 This algorithm is not suitable for large data sets as its average and worst-case time complexity is quite high.
 - Design Strategy - `Brute Force`
 - `Stable` algorithm
@@ -84,3 +85,26 @@ This algorithm is not suitable for large data sets as its average and worst-case
 
 #### Logic Execution
 ![](../../../images/bubble_sort_correct.png)
+
+### Insertion Sort
+Array is split into sorted and unsorted array. Values from unsorted part are picked and placed at correct position in sorted array.
+Values from the unsorted part are picked and placed at the correct position in the sorted part.
+Works similar to the way you sort playing cards.
+
+Efficient for small data set.
+
+And it is appropriate for data sets which are already partially sorted.
+
+- Design Strategy - `Decrease and conquer`
+- `Stable` algorithm
+- `In Place` algorithm
+- Time Complexity -  `Ω(n)`, Θ(n<sup>2</sup>), O(n<sup>2</sup>)
+- Space Complexity - `O(1)`
+
+#### Pseudo Code and complexity
+
+![](../../../images/insertion_sort_pseudo.png)
+
+#### Logic Execution
+
+![](../../../images/insertion_sort.png)
