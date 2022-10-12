@@ -87,6 +87,7 @@ This algorithm is not suitable for large data sets as its average and worst-case
 ![](../../../images/bubble_sort_correct.png)
 
 ### Insertion Sort
+
 Array is split into sorted and unsorted array. Values from unsorted part are picked and placed at correct position in sorted array.
 Values from the unsorted part are picked and placed at the correct position in the sorted part.
 Works similar to the way you sort playing cards.
@@ -108,3 +109,27 @@ And it is appropriate for data sets which are already partially sorted.
 #### Logic Execution
 
 ![](../../../images/insertion_sort.png)
+
+### Merge Sort
+Arrays in initially divided into two equal halves, and then they are combined in sorted array
+
+Here array is recursively divided into two halves till the size becomes 1. 
+Once size becomes 1 then it will merge back recursively till the complete array is merged.
+
+Slower compared to the other sort algorithms for smaller tasks.
+
+It goes through the whole process even if the array is sorted.
+
+- Design Strategy - `Divide and conquer`
+- `Stable` algorithm
+- `NOT In Place` algorithm
+- Time Complexity -  Ω(n log(n)), Θ(n log(n)), O(n log(n))
+- space complexity - O(n)
+
+#### Pseudo Code and complexity
+
+![](../../../images/merge-sort_pseudo.png)
+
+#### Logic Execution
+
+![](../../../images/merge_sort.png)
