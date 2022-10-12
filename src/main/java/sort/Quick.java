@@ -1,6 +1,7 @@
 package sort;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * Quick sort:
@@ -16,84 +17,99 @@ import java.util.ArrayList;
  */
 public class Quick {
 
-    public ArrayList<Integer> quicksort_naive_partition(ArrayList<Integer> arr){
-        naive_sort(arr,0,arr.size()-1);
-        return arr;
-    }
-
-    private void naive_sort(ArrayList<Integer> arr, int low,int high){
-//        if(low>=high)
-//            return;
-        if(low < high){
-            int pivot = naive_partition(arr,low,high);
-            naive_sort(arr,low,pivot-1);
-            naive_sort(arr,pivot+1,high);
-        }
-    }
-
-    private int naive_partition(ArrayList<Integer> arr, int low, int high){
-        //ArrayList<Integer> temp = new ArrayList<>();
-        int[] temp = new int[(high-low) +1];
-        // Step2: Choose the pivot based on the type of partition you want, index based for naive partition, first element for Hoare's partition and last element for Lomuto's partition.
-        int pivot = arr.get(high);
-        //Step 3: Now take two variables indicating left and right of the array excluding the pivot.
-        //smaller number
-        int index = 0;
-        for (int i = low; i <= high; ++i) {
-            if(arr.get(i)<pivot){
-                temp[index++] = arr.get(i);
-            }
-        }
-        //pivot position
-        int pos = index;
-        // Placing the pivot to its original position
-        temp[index++]= pivot;
-
-        for (int i = low; i <=high; ++i) {
-            if(arr.get(i)>pivot){
-                temp[index++]=arr.get(i);
-            }
-        }
-        //copy temp values to array
-        for (int i = low; i <=high; ++i) {
-            arr.set(i, temp[i-low]);
-        }
-        return pos;
-    }
-
-    public ArrayList<Integer> quicksort_lomuto_partition(ArrayList<Integer> arr){
-        int n = arr.size();
-        lomuto_sort(arr,0,n-1);
-        return arr;
-    }
-
-    private void lomuto_sort(ArrayList<Integer> arr, int low, int high){
-        if(low < high){
-            int pivot = lomuto_partition(arr,low,high);
-            lomuto_partition(arr,low,pivot-1);
-            lomuto_partition(arr,pivot+1,high);
-        }
-    }
-
-    // This function will partition arr[low ... high] around pivot_element = arr[high] such that all the
-    // elements less than pivot_element move to its left and all the elements greater than or equal to
-    // pivot_element move to its right.
-    private int lomuto_partition(ArrayList<Integer> arr, int low, int high){
-        int pivot = arr.get(high);
-        int index = low;
-        for (int i = low; i < high; i++) {
-            if(arr.get(i) < pivot){
-                swap(arr,index,i);
-                index++;
-            }
-        }
-        swap(arr,index,high);
-        return index;
-    }
-
     private void swap(ArrayList<Integer> arr, int index1, int index2){
         int temp = arr.get(index1);
         arr.set(index1, arr.get(index2));
         arr.set(index2,temp);
     }
+
+    public ArrayList<Integer>firstIndex_quick_sort(ArrayList<Integer>arr){
+        int n = arr.size();
+        firstIndex_helper(arr,0,n-1);
+        return arr;
+    }
+
+    private void firstIndex_helper(ArrayList<Integer>arr, int low, int high){
+        if(low>=high)
+            return;
+        int pivot = firstIndex_partition(arr,low,high);
+        firstIndex_helper(arr,low,pivot-1);
+        firstIndex_helper(arr,pivot+1,high);
+    }
+
+    private int firstIndex_partition(ArrayList<Integer>arr, int low, int high){
+        int pivot = high;
+        int pivot_element = arr.get(low);
+        for (int i = high; i >low ; i--) {
+            if(arr.get(i)>pivot_element){
+                swap(arr,i,pivot);
+                pivot--;
+            }
+        }
+        //taking pivot element to pivot position
+        swap(arr,pivot,low);
+        return pivot;
+    }
+
+    public ArrayList<Integer> lastIndex_quickSort(ArrayList<Integer> arr){
+        int n = arr.size();
+        lastIndex_helper(arr,0,n-1);
+        return arr;
+    }
+
+    private void lastIndex_helper(ArrayList<Integer>arr, int low, int high){
+        if(low>=high)
+            return;
+        int pivot = lastIndex_partition(arr,low,high);
+        lastIndex_helper(arr,low,pivot-1);
+        lastIndex_helper(arr,pivot+1,high);
+    }
+
+    private int lastIndex_partition(ArrayList<Integer>arr, int low, int high){
+        int pivot = low;
+        int pivotElement = arr.get(high);
+        for (int i = low; i < high; i++) {
+            if(arr.get(i)<pivotElement){
+                swap(arr,i,pivot);
+                pivot++;
+            }
+        }
+        //swap pivot point
+        swap(arr,pivot,high);
+        return pivot;
+    }
+
+    public ArrayList<Integer> random_quickSort(ArrayList<Integer> arr){
+        int n = arr.size();
+        random_helper(arr,0,n-1);
+        return arr;
+    }
+
+    private void random_helper(ArrayList<Integer>arr, int low, int high){
+        if(low>=high)
+            return;
+        int pivot = random_partition(arr,low,high);
+        lastIndex_helper(arr,low,pivot-1);
+        lastIndex_helper(arr,pivot+1,high);
+    }
+
+    private int random_partition(ArrayList<Integer>arr, int low, int high){
+        Random random = new Random();
+        int randomIndex = random.nextInt(high-low) + low;
+        swap(arr,randomIndex,high);
+
+        int pivot = low;
+        int pivotElement = arr.get(high);
+        for (int i = low; i < high; i++) {
+            if(arr.get(i)<pivotElement){
+                swap(arr,i,pivot);
+                pivot++;
+            }
+        }
+        //swap pivot point
+        swap(arr,pivot,high);
+        return pivot;
+    }
+
+
 }
