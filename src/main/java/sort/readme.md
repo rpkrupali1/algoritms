@@ -123,8 +123,8 @@ It goes through the whole process even if the array is sorted.
 - Design Strategy - `Divide and conquer`
 - `Stable` algorithm
 - `NOT In Place` algorithm
-- Time Complexity -  Ω(n log(n)), Θ(n log(n)), O(n log(n))
-- space complexity - O(n)
+- Time Complexity -  `Ω(n log(n))`, `Θ(n log(n))`, `O(n log(n))`
+- space complexity - `O(n)`
 
 #### Pseudo Code and complexity
 
@@ -133,3 +133,26 @@ It goes through the whole process even if the array is sorted.
 #### Logic Execution
 
 ![](../../../images/merge_sort.png)
+
+### Quick Sort
+It picks an element as a pivot and partitions the given array around the picked pivot. 
+There are many versions of quickSort that pick pivot in different ways.
+
+- Always pick the first element as a pivot.
+- Always pick the last element as a pivot 
+- Pick a random element as a pivot.
+- Pick median as the pivot.
+
+The key process in quickSort is a partition(). 
+After picking pivot keep smaller elements before pivot and larger after pivot.
+Recursively follow this process.
+
+- Design Strategy - `Divide and conquer`
+- Time Complexity -  `Ω(n log(n))`, `Θ(n log(n))`, O(n<sup>2</sup>)
+- space complexity - `O(n)` `O(log(n))`
+
+### First Index Partition
+#### Pseudo Code and complexity
+
+#### Logic Execution
+![](../../../images/quickSort_firstIndexPartition.png)
