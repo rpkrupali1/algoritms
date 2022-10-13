@@ -156,3 +156,23 @@ Recursively follow this process.
 
 #### Logic Execution
 ![](../../../images/quickSort_firstIndexPartition.png)
+
+### Heap Sort
+Convert the array ito heap data structure using heapify 
+then one by one delete the root node of max heap and replace with last node.
+Repeat this process.
+
+- `In Place` algorithm
+- Stability - Default implementation is `not stable`. However, it can be made stable.
+- Time Complexity -  `Ω(n log(n))`, `Θ(n log(n))`, `O(n log(n))`
+- Space Complexity - `O(1)`
+- Typically, 2-3 times slower than well-implemented QuickSort.  The reason for slowness is a lack of locality of reference.
+- The Merge sort is slightly faster than the Heap sort. But on the other hand merge sort takes extra memory. Depending on the requirement, one should choose which one to use.
+- Better than Selection sort as it takes advantage of heap data structure to get maximum element in constant time.
+
+#### Pseudo Code and complexity
+
+![](../../../images/heap_sort_pseudo.png)
+
+#### Logic Execution
+![](../../../images/heap_sort.png)
