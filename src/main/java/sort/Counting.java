@@ -14,16 +14,17 @@ import java.util.ArrayList;
 public class Counting {
     public ArrayList<Integer> counting_sort(ArrayList<Integer>arr){
         int n = arr.size();
-        int[] ouput = new int[n+1];
+        int[] ouput = new int[n];
 
         //find the largest values of array
         int max = arr.get(0);
-        for (int i = 0; i < n; i++) {
-            if(arr.get(i)>max)
-                max = arr.get(i);
+        for (Integer integer : arr) {
+            if (integer > max)
+                max = integer;
         }
 
         //define count array
+
         int[] count = new int[max+1];
 
         //initialize count array with all zeros
@@ -32,8 +33,8 @@ public class Counting {
 //        }
 
         //store the count of each element
-        for (int i = 0; i < n; i++) {
-            count[arr.get(i)]++;
+        for (Integer integer : arr) {
+            count[integer]++;
         }
 
         //store the cumulative count of each array
@@ -53,4 +54,6 @@ public class Counting {
         }
         return arr;
     }
+
+
 }
