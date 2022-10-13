@@ -176,3 +176,25 @@ Repeat this process.
 
 #### Logic Execution
 ![](../../../images/heap_sort.png)
+
+### Counting Sort
+Sorts the elements of an array by counting the number of occurrences of each unique element in the array.
+Count is stored in an auxiliary array.
+And sorting is done by mapping the count as an index of auxiliary array.
+
+- It makes some assumption about data that its values going to be in range o to 100 or 100 to 1000 etc.
+- It is NOT comparison based algorithm 
+- `NOT In Place` algorithm
+- `Stable` Algorithm
+- Time Complexity -  `Ω(n+k)`, `Θ(n+k)`, `O(n+2)`
+- Space Complexity - `O(k)`
+- Counting sort is used when
+  - There are smaller integers with duplicates (multiple counts)
+  - Linear complexity is needed
+
+#### Pseudo Code and complexity
+
+
+#### Logic Execution
+
+![](../../../images/Counting_sort.png)

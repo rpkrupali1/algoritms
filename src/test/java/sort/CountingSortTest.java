@@ -16,4 +16,13 @@ public class CountingSortTest extends ParentTest {
         printTest(output);
         Assert.assertTrue(isSorted(output));
     }
+
+    @Test
+    public void test002(){
+        Counting sort = new Counting();
+        ArrayList<Integer> input = new ArrayList<>(Arrays.asList(400000,-400000));
+        ArrayList<Integer> output = sort.counting_sort(input);
+        printTest(output);
+        Assert.assertTrue(isSorted(output));
+    }
 }
