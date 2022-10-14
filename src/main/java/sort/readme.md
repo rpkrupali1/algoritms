@@ -188,9 +188,7 @@ And sorting is done by mapping the count as an index of auxiliary array.
 - `Stable` Algorithm
 - Time Complexity -  `Ω(n+k)`, `Θ(n+k)`, `O(n+2)`
 - Space Complexity - `O(k)`
-- Counting sort is used when
-  - There are smaller integers with duplicates (multiple counts)
-  - Linear complexity is needed
+- Counting sort is used when there are smaller integers with duplicates (multiple counts) linear complexity is needed
 
 #### Pseudo Code and complexity
 
@@ -198,3 +196,25 @@ And sorting is done by mapping the count as an index of auxiliary array.
 #### Logic Execution
 
 ![](../../../images/Counting_sort.png)
+
+
+### Radix Sort
+It sorts elements by grouping the individual digits of the same place value.
+And sort elements according to their increasing/decreasing order.
+
+The idea od radix sort is to do digit by digit sort starting from the least significant digit to most significant digit.
+Radix sort uses counting sort as a subroutine to sort.
+
+- It is NOT comparison based algorithm
+- `NOT In Place` algorithm
+- `Stable` Algorithm
+- Time Complexity -  `Ω(n+k)`, `Θ(n+k)`, `O(n+2)`
+- Space Complexity - `O(k)`
+- Radix sort has linear time complexity which is better than `O(nlog n)` of comparative sorting algorithms.
+- Radix sort is space inefficient. This is the reason why this sort is not used in software libraries.
+- Radix sort is implemented in
+  - DC3 Algorithm
+  - places where numbers are in large ranges
+
+![](../../../images/radix_sorting_process.png)
+
