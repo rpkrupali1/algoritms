@@ -24,6 +24,22 @@ public class ThreeSumSmallerTest extends ParentTest {
     }
 
     @Test
+    public void test005(){
+        ArrayList<Integer> input = new ArrayList<>(Arrays.asList(100000, 10000, -9999, -98531, -12356));
+        ThreeSumSmaller threeSumSmaller = new ThreeSumSmaller();
+        int output = threeSumSmaller.two_pointer(1000,input);
+        Assert.assertEquals(output,6);
+    }
+
+    @Test
+    public void test006(){
+        ArrayList<Integer> input = new ArrayList<>(Arrays.asList(3, 1, 234, 131, 0, 0, 0, 1));
+        ThreeSumSmaller threeSumSmaller = new ThreeSumSmaller();
+        int output = threeSumSmaller.two_pointer(10,input);
+        Assert.assertEquals(output,20);
+    }
+
+    @Test
     public void test002(){
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(5, 1, 3, 4, 7));
         ThreeSumSmaller threeSumSmaller = new ThreeSumSmaller();
