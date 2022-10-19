@@ -2,6 +2,7 @@ package sort;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import sort.examples.KMostFrequent;
 
 import java.util.ArrayList;
 import java.util.Arrays;

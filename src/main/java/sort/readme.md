@@ -1,6 +1,13 @@
 # Sorting Algorithms
 Sorting algorithm is algorithm that rearranges given array/list in an order.
 
+Benefits of sorting
+- Searching for a value is faster in sorted array
+- Can find duplicates easily
+- Matching items in two or more file
+- Can find median and top k values quickly
+- 
+
 ## Sorting Terminology
 
 ### In-place Sorting
