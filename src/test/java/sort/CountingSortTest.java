@@ -2,6 +2,7 @@ package sort;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import sort.methods.Counting;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,7 +18,7 @@ public class CountingSortTest extends ParentTest {
         Assert.assertTrue(isSorted(output));
     }
 
-    @Test
+    @Test(enabled = false)
     public void test002(){
         Counting sort = new Counting();
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(400000,-400000));

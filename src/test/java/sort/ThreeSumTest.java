@@ -2,6 +2,7 @@ package sort;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import sort.examples.ThreeSum;
 
 import java.util.ArrayList;
 import java.util.Arrays;

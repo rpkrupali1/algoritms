@@ -1,6 +1,7 @@
 package sort;
 
 import org.testng.annotations.Test;
+import sort.examples.MergeSortedArrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;

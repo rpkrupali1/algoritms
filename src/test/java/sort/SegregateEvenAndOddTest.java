@@ -1,6 +1,7 @@
 package sort;
 
 import org.testng.annotations.Test;
+import sort.examples.SegregateEvenAndOdd;
 
 import java.util.ArrayList;
 import java.util.Arrays;
