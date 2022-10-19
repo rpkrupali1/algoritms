@@ -17,28 +17,29 @@ import java.util.*;
 public class KMostFrequent {
     public ArrayList<String> k_most_frequent(Integer k, ArrayList<String> words) {
         Map<String,Integer> word_count = new HashMap<>();
-        int n = words.size();
         //put count of all distinct words into map
-        for (int i = 0; i < n; i++) {
-            word_count.put(words.get(i),word_count.getOrDefault(words.get(i),0)+1);
+        for (String word : words) {
+            word_count.put(word, word_count.getOrDefault(word, 0) + 1);
         }
-        // create arraylist from above  map
-        ArrayList<Map.Entry<String,Integer>> list = new ArrayList<>(word_count.entrySet());
 
-        //sort the list by frequency
-        Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
-            @Override
-            public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
-                if(o1.getValue().equals(o2.getValue()))
-                    return o2.getValue().compareTo(o1.getValue());
-                else
-                    return o1.getKey().compareTo(o2.getKey());
-            }
-        });
+        //priority queue with custom sort
+        Queue<String> queue = new PriorityQueue<>((a,b) ->
+                word_count.get(a).equals(word_count.get(b)) ? a.compareTo(b): word_count.get(b)-word_count.get(a));
 
+        //sort using queue
+        for (String s: word_count.keySet()) {
+            queue.offer(s);
+        }
 
+        ArrayList<String> result = new ArrayList<>();
 
-        return new ArrayList<>();
+        int i = 0;
+        while (i < k) {
+            result.add(queue.poll());
+            i++;
+        }
+
+        return result;
     }
 }
 
