@@ -24,7 +24,8 @@ public class Merge {
     private void split(ArrayList<Integer>arr, int leftIndex, int rightIndex){
         if(leftIndex >= rightIndex)
             return;
-        int mid = (leftIndex + rightIndex)/2;
+        // int mid = (leftIndex + rightIndex)/2; //this is not as effective way
+        int mid = leftIndex + (rightIndex-leftIndex)/2;
         // call merge sort for first half
         split(arr,leftIndex,mid);
         //call merge sort for second half
