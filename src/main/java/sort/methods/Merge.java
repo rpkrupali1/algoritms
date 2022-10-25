@@ -8,6 +8,13 @@ import java.util.ArrayList;
  * continuously split array in half until it can not be further divided that is stop the recursion when array is empty or has only one element left
  * If the array has multiple elements split the array into halves, recursively invoke merge sort on each half
  * When both halves are sorted then combine
+ *
+ * Steps:
+ * 1) find mid
+ * 2) left half
+ * 3) right half
+ * 4) merge
+ *
  * Design Strategy - Divide and Conquer
  * Time Complexity -  Ω(n log(n)), Θ(n log(n)), O(n log(n))
  * space complexity - O(n)
