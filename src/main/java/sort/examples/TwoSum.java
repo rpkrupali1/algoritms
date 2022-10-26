@@ -2,6 +2,8 @@ package sort.examples;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
 
 /**
  * You have an array of N numbers and a number target.
@@ -29,7 +31,9 @@ public class TwoSum {
 
     /**
      * This is the worst time and can be used when you don't have option to sort, or you can not use space
+     * Naive approach
      * Time - O(N^2)
+     * Space - O(1)
      */
     public boolean two_sum_bruteForce(ArrayList<Integer> arr, int target){
         int n = arr.size();
@@ -45,6 +49,8 @@ public class TwoSum {
 
     /**
      * Use this solution when array is sorted or sort array first
+     * Time: O (N logN)
+     * O(1)
      */
     public boolean two_sum_twoPointerPass(ArrayList<Integer> arr, int target){
         Collections.sort(arr);
@@ -64,30 +70,38 @@ public class TwoSum {
     }
 
     /**
-     * Divide and conquer
-     *
+     * Approach - Binary search
+     * Look for the solution pair in two halves and if either of halve have it then we are done
+     * Else we look for solution that may straddle the two halves and each half has N/2 elements.
      */
-    public boolean twoSum_divideConquer(ArrayList<Integer> arr, int target){
-        int n = arr.size();
-        merge_sort(arr,0,n-1);
+//    public boolean binarySearch(ArrayList<Integer> arr, int target){
+//        int n = arr.size();
+//        Collections.sort(arr);
+//        for (int i = 0; i < n; i++) {
+//            int output = target- arr.get(i);
+//
+//        }
+//        return false;
+//    }
+
+
+    /**
+     * If extra space is allowed then using Hashtable is the fastest way.
+     * Time O(N)
+     * Space O(N)
+     */
+    public boolean hashMap(ArrayList<Integer>arr,int target){
+        //create hashmap
+        HashSet<Integer> map = new HashSet<>();
+        for (int i = 0; i < arr.size(); i++) {
+            int current = arr.get(i);
+            int required = target-current;
+            if(map.contains(required))
+                return true;
+            map.add(arr.get(i));
+        }
         return false;
     }
-
-
-
-    private void merge_sort(ArrayList<Integer> arr, int start, int end){
-        if(start>=end)
-            return;
-        int mid = start + (end-start)/2;
-        merge_sort(arr,start,mid);
-        merge_sort(arr,mid+1,end);
-        merge(arr,start,mid,end);
-    }
-
-    private void merge(ArrayList<Integer> arr, int start, int mid, int end){
-
-    }
-
 
 
 }
