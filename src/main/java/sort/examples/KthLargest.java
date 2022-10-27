@@ -1,8 +1,7 @@
 package sort.examples;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.PriorityQueue;
 
 /**
@@ -41,13 +40,24 @@ public class KthLargest {
      * Time complexity = O(N log k)
      * Space Complexity - O(k)
      */
-    public int getkth_priorityQueue(int[] arr, int k){
+    public int priorityQueue(int[] arr, int k){
         PriorityQueue<Integer> pq = new PriorityQueue<>();
         for (int i = 0; i < arr.length; i++) {
             pq.add(arr[i]);
 
             if(pq.size()>k)
                 pq.poll(); // remove the elements which are greater than pq
+        }
+        return pq.poll();
+    }
+
+    public int priorityQueue(ArrayList<Integer> arr, int k){
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        for (int i = 0; i < arr.size(); i++) {
+            pq.add(arr.get(i));
+        }
+        for (int i = k; i < arr.size(); i++) {
+            pq.poll();
         }
         return pq.poll();
     }
