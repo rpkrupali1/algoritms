@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * Output: [1,5]
  * Explanation: Only 1 and 5 appeared in all three arrays
  */
-public class IntersectionOfArrays {
+public class IntersectionOfThreeSortedArrays {
     public int[] threeSorted_bruteForce(int[]arr1, int[]arr2, int[]arr3){
         ArrayList<Integer> output = new ArrayList<>();
         for (int i = 0; i < arr1.length; i++) {
