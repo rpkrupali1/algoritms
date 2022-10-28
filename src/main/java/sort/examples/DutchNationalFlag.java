@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * Solution is only allowed to use constant extra memory
  */
 public class DutchNationalFlag {
-    public ArrayList<Character> dutchNationalFlag(ArrayList<Character>arr){
+    public ArrayList<Character> pointer_approach(ArrayList<Character>arr){
         int n = arr.size();
         int RIndex = 0, GIndex=0,BIndex=n-1;
         while (GIndex<=BIndex){
@@ -26,6 +26,27 @@ public class DutchNationalFlag {
                 swap(arr,GIndex,BIndex);
                 BIndex--;
             }
+        }
+        return arr;
+    }
+
+    public ArrayList<Character> byCount(ArrayList<Character>arr){
+        int r=0,g=0,b=0;
+        for (int i = 0; i < arr.size(); i++) {
+            if(arr.get(i)=='R')
+                r++;
+            else if (arr.get(i)=='G')
+                g++;
+            else b++;
+        }
+        for (int i = 0; i < r; i++) {
+            arr.set(i,'R');
+        }
+        for (int i = r; i < r+g; i++) {
+            arr.set(i,'G');
+        }
+        for (int i = r+g; i < arr.size(); i++) {
+            arr.set(i,'B');
         }
         return arr;
     }
