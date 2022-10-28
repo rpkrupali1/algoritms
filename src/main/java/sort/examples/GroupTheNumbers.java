@@ -8,9 +8,15 @@ import java.util.ArrayList;
  *
  * Example:
  * input: [1,2,3,4]
- * output: [4,2,1,3]
+ * output: [4,2,1,3] or [2,4,1,3] or [2,4,3,1] or [4,2,3,1]
+ *
+ * Order does not matter. Return the same array even on left side and odd on right side.
  */
 public class GroupTheNumbers {
+    /**
+     * Time - Linear complexity - O(n)
+     * Space - O(1)
+     */
     public ArrayList<Integer> twoPointer(ArrayList<Integer>arr){
         int even=-1;
         for (int i = 0; i < arr.size() ; i++) {
