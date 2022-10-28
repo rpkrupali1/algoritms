@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * Output: [1,5]
  * Explanation: Only 1 and 5 appeared in all three arrays
  */
-public class IntersectionOfArrays {
+public class IntersectionOfThreeSortedArrays {
     public int[] threeSorted_bruteForce(int[]arr1, int[]arr2, int[]arr3){
         ArrayList<Integer> output = new ArrayList<>();
         for (int i = 0; i < arr1.length; i++) {
@@ -41,5 +41,30 @@ public class IntersectionOfArrays {
                 k++;
         }
         return output.stream().mapToInt(n->n).toArray();
+    }
+
+    /**
+     *The idea is to use the merging technique of the Merge Sort algorithm.
+     * We simulate merging the three arrays into one.
+     * While doing so, we will always consider the elements of the three arrays in sorted order,
+     * thus we can check for equality of the three elements being considered and get the common elements.
+     *
+     * Time - O(l + m + n)
+     * Space - O(l + m +n)
+     */
+    public ArrayList<Integer> pointer(ArrayList<Integer> arr1, ArrayList<Integer> arr2, ArrayList<Integer> arr3) {
+        ArrayList<Integer> result = new ArrayList<>();
+        int i=0,j=0,k=0;
+        while ((i<arr1.size() && j<arr2.size() && k<arr3.size())){
+            if(arr1.get(i) == arr2.get(j) && arr1.get(i) == arr3.get(k)){
+                result.add(arr1.get(i));
+                i++;j++;k++;
+            } else if (arr1.get(i) <= arr2.get(j) && arr1.get(i) <= arr3.get(k))
+                i++;
+            else if (arr2.get(j) <= arr1.get(i) && arr2.get(j) <= arr3.get(k))
+                j++;
+            else k++;
+        }
+        return result;
     }
 }
