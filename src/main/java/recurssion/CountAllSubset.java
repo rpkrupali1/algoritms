@@ -21,10 +21,20 @@ package recurssion;
 public class CountAllSubset {
     /**
      * math formula = 2 ^ n
+     * time: O(n)
+     * space: O(n) = space taken by input + auxiliary space + space taken by output
      */
     public int recursive(int n){
         if(n==0)
             return 1;
         return 2 * recursive(n-1);
+    }
+
+    public int iterative(int n){
+        int result = 1;
+        for (int i = 1; i <= n; i++) {
+            result = result * 2;
+        }
+        return result;
     }
 }
