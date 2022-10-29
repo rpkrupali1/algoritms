@@ -62,5 +62,20 @@ public class CountAllSubset {
         return result;
     }
 
+    /**
+     * time - o(n)
+     * space - o(1)
+     */
+    public int divideandcon_iterative(int n){
+        int result = 1;
+        int multiplier = 2;
+        while (n >0) {
+            if(n%2==1)
+                result *= multiplier;
+            n/=2;
+            multiplier*=multiplier;
+        }
+        return result;
+    }
 
 }

@@ -42,9 +42,23 @@ public class CountAllSubsetTest extends ParentTest {
     }
 
     @Test
+    public void dividendcon_iterative_test000(){
+        CountAllSubset count = new CountAllSubset();
+        int actualOutput = count.divideandcon_iterative(3);
+        Assert.assertEquals(actualOutput,8);
+    }
+
+    @Test
     public void iterative_test001(){
         CountAllSubset count = new CountAllSubset();
         int actualOutput = count.iterative(20);
+        Assert.assertEquals(actualOutput,1048576);
+    }
+
+    @Test
+    public void dividendcon_iterative_test001(){
+        CountAllSubset count = new CountAllSubset();
+        int actualOutput = count.divideandcon_iterative(20);
         Assert.assertEquals(actualOutput,1048576);
     }
 
