@@ -14,6 +14,13 @@ public class CountAllSubsetTest extends ParentTest {
     }
 
     @Test
+    public void dividendcon_recursive_test000(){
+        CountAllSubset count = new CountAllSubset();
+        int actualOutput = count.dividendcon_recursive(3);
+        Assert.assertEquals(actualOutput,8);
+    }
+
+    @Test
     public void recursive_test001(){
         CountAllSubset count = new CountAllSubset();
         int actualOutput = count.recursive(20);
