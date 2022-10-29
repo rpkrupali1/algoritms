@@ -63,7 +63,7 @@ public class CountAllSubset {
     }
 
     /**
-     * time - o(n)
+     * time - o(log n)
      * space - o(1)
      */
     public int divideandcon_iterative(int n){
