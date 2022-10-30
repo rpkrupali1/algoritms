@@ -46,7 +46,7 @@ public class Fibonacci {
      * Space - O(1)
      */
     public int iterative(int n){
-        if(n<=1)
+        if(n==1 || n==0)
             return n;
         int num1=0, num2=1;
         int result=0;

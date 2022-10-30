@@ -20,6 +20,13 @@ public class FibonacciTest {
     }
 
     @Test
+    public void recursive_test002(){
+        Fibonacci fib = new Fibonacci();
+        int actual = fib.recursive(2);
+        Assert.assertEquals(actual,1);
+    }
+
+    @Test
     public void iterative_test000(){
         Fibonacci fib = new Fibonacci();
         int actual = fib.iterative(4);
@@ -31,5 +38,33 @@ public class FibonacciTest {
         Fibonacci fib = new Fibonacci();
         int actual = fib.iterative(1);
         Assert.assertEquals(actual,1);
+    }
+
+    @Test
+    public void iterative_test002(){
+        Fibonacci fib = new Fibonacci();
+        int actual = fib.iterative(0);
+        Assert.assertEquals(actual,0);
+    }
+
+    @Test
+    public void iterative_test003(){
+        Fibonacci fib = new Fibonacci();
+        int actual = fib.iterative(2);
+        Assert.assertEquals(actual,1);
+    }
+
+    @Test
+    public void iterative_test005(){
+        Fibonacci fib = new Fibonacci();
+        int actual = fib.iterative(5);
+        Assert.assertEquals(actual,5);
+    }
+
+    @Test
+    public void iterative_test006(){
+        Fibonacci fib = new Fibonacci();
+        int actual = fib.iterative(6);
+        Assert.assertEquals(actual,8);
     }
 }
