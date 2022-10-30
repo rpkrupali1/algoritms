@@ -1,5 +1,6 @@
 package sort;
 
+import common.ParentTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import sort.methods.Heap;
@@ -15,7 +16,7 @@ public class HeapSortTest extends ParentTest {
         Heap sort = new Heap();
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(5, 8, 3, 9, 4, 1, 7));
         ArrayList<Integer> output = sort.heap_sort(input);
-        printTest(output);
+        print(output);
         Assert.assertTrue(isSorted(output));
     }
 
@@ -24,7 +25,7 @@ public class HeapSortTest extends ParentTest {
         Heap heap = new Heap();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(0, 199999999, 1000000000));
         ArrayList<Integer> output = heap.heap_sort(input);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 
@@ -33,7 +34,7 @@ public class HeapSortTest extends ParentTest {
         Heap heap = new Heap();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(1));
         ArrayList<Integer> output = heap.heap_sort(input);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 
@@ -42,7 +43,7 @@ public class HeapSortTest extends ParentTest {
         Heap heap = new Heap();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(1, -2));
         ArrayList<Integer> output = heap.heap_sort(input);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 
@@ -51,7 +52,7 @@ public class HeapSortTest extends ParentTest {
         Heap heap = new Heap();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(1000000000, 0));
         ArrayList<Integer> output = heap.heap_sort(input);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 
@@ -60,7 +61,7 @@ public class HeapSortTest extends ParentTest {
         Heap heap = new Heap();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(-9, 9));
         ArrayList<Integer> output = heap.heap_sort(input);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 
@@ -69,7 +70,7 @@ public class HeapSortTest extends ParentTest {
         Heap heap = new Heap();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(0, 3, 2, 1));
         ArrayList<Integer> output = heap.heap_sort(input);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 
@@ -78,7 +79,7 @@ public class HeapSortTest extends ParentTest {
         Heap heap = new Heap();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(1, 1, 1, -1));
         ArrayList<Integer> output = heap.heap_sort(input);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 
@@ -87,7 +88,7 @@ public class HeapSortTest extends ParentTest {
         Heap heap = new Heap();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 2, 1));
         ArrayList<Integer> output = heap.heap_sort(input);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 
@@ -96,7 +97,7 @@ public class HeapSortTest extends ParentTest {
         Heap heap = new Heap();
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(-1, -2, -3, -4));
         ArrayList<Integer> output = heap.heap_sort(input);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 
@@ -105,7 +106,7 @@ public class HeapSortTest extends ParentTest {
         Heap heap = new Heap();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(1, 3, 5, 7, -2, -4, -6));
         ArrayList<Integer> output = heap.heap_sort(input);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 
@@ -114,7 +115,7 @@ public class HeapSortTest extends ParentTest {
         Heap heap = new Heap();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(1, 2, 1, 2));
         ArrayList<Integer> output = heap.heap_sort(input);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 }

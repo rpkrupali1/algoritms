@@ -1,5 +1,6 @@
 package sort;
 
+import common.ParentTest;
 import org.testng.annotations.Test;
 import sort.examples.SegregateEvenAndOdd;
 
@@ -14,7 +15,7 @@ public class SegregateEvenAndOddTest extends ParentTest {
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(1,2,3,4));
         SegregateEvenAndOdd sort = new SegregateEvenAndOdd();
         ArrayList<Integer> output = sort.sortByEvenAndOdd(input);
-        printTest(output);
+        print(output);
     }
 
     @Test
@@ -22,7 +23,7 @@ public class SegregateEvenAndOddTest extends ParentTest {
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(4, 9, 5, 2, 9, 5, 7, 10));
         SegregateEvenAndOdd sort = new SegregateEvenAndOdd();
         ArrayList<Integer> output = sort.sortByEvenAndOdd(input);
-        printTest(output);
+        print(output);
     }
 
     @Test
@@ -30,7 +31,7 @@ public class SegregateEvenAndOddTest extends ParentTest {
         ArrayList<Integer> input = new ArrayList<>(List.of(7));
         SegregateEvenAndOdd sort = new SegregateEvenAndOdd();
         ArrayList<Integer> output = sort.sortByEvenAndOdd(input);
-        printTest(output);
+        print(output);
     }
 
     @Test
@@ -38,7 +39,7 @@ public class SegregateEvenAndOddTest extends ParentTest {
         ArrayList<Integer> input = new ArrayList<>(List.of(90));
         SegregateEvenAndOdd sort = new SegregateEvenAndOdd();
         ArrayList<Integer> output = sort.sortByEvenAndOdd(input);
-        printTest(output);
+        print(output);
     }
 
     @Test
@@ -46,7 +47,7 @@ public class SegregateEvenAndOddTest extends ParentTest {
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(3,5));
         SegregateEvenAndOdd sort = new SegregateEvenAndOdd();
         ArrayList<Integer> output = sort.sortByEvenAndOdd(input);
-        printTest(output);
+        print(output);
     }
 
     @Test
@@ -54,7 +55,7 @@ public class SegregateEvenAndOddTest extends ParentTest {
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(3,4));
         SegregateEvenAndOdd sort = new SegregateEvenAndOdd();
         ArrayList<Integer> output = sort.sortByEvenAndOdd(input);
-        printTest(output);
+        print(output);
     }
 
     @Test
@@ -62,7 +63,7 @@ public class SegregateEvenAndOddTest extends ParentTest {
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(4,3));
         SegregateEvenAndOdd sort = new SegregateEvenAndOdd();
         ArrayList<Integer> output = sort.sortByEvenAndOdd(input);
-        printTest(output);
+        print(output);
     }
 
     @Test
@@ -70,7 +71,7 @@ public class SegregateEvenAndOddTest extends ParentTest {
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(10,90));
         SegregateEvenAndOdd sort = new SegregateEvenAndOdd();
         ArrayList<Integer> output = sort.sortByEvenAndOdd(input);
-        printTest(output);
+        print(output);
     }
 
     @Test
@@ -78,7 +79,7 @@ public class SegregateEvenAndOddTest extends ParentTest {
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(1,3,5));
         SegregateEvenAndOdd sort = new SegregateEvenAndOdd();
         ArrayList<Integer> output = sort.sortByEvenAndOdd(input);
-        printTest(output);
+        print(output);
     }
 
     @Test
@@ -86,7 +87,7 @@ public class SegregateEvenAndOddTest extends ParentTest {
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(1,3,4));
         SegregateEvenAndOdd sort = new SegregateEvenAndOdd();
         ArrayList<Integer> output = sort.sortByEvenAndOdd(input);
-        printTest(output);
+        print(output);
     }
 
     @Test
@@ -94,7 +95,7 @@ public class SegregateEvenAndOddTest extends ParentTest {
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(1,2,5));
         SegregateEvenAndOdd sort = new SegregateEvenAndOdd();
         ArrayList<Integer> output = sort.sortByEvenAndOdd(input);
-        printTest(output);
+        print(output);
     }
 
     @Test
@@ -102,7 +103,7 @@ public class SegregateEvenAndOddTest extends ParentTest {
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(5,6,8));
         SegregateEvenAndOdd sort = new SegregateEvenAndOdd();
         ArrayList<Integer> output = sort.sortByEvenAndOdd(input);
-        printTest(output);
+        print(output);
     }
 
     @Test
@@ -110,7 +111,7 @@ public class SegregateEvenAndOddTest extends ParentTest {
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(4,7,9));
         SegregateEvenAndOdd sort = new SegregateEvenAndOdd();
         ArrayList<Integer> output = sort.sortByEvenAndOdd(input);
-        printTest(output);
+        print(output);
     }
 
     @Test
@@ -118,7 +119,7 @@ public class SegregateEvenAndOddTest extends ParentTest {
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(4,7,8));
         SegregateEvenAndOdd sort = new SegregateEvenAndOdd();
         ArrayList<Integer> output = sort.sortByEvenAndOdd(input);
-        printTest(output);
+        print(output);
     }
 
     @Test
@@ -126,7 +127,7 @@ public class SegregateEvenAndOddTest extends ParentTest {
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(4,6,7));
         SegregateEvenAndOdd sort = new SegregateEvenAndOdd();
         ArrayList<Integer> output = sort.sortByEvenAndOdd(input);
-        printTest(output);
+        print(output);
     }
 
     @Test
@@ -134,6 +135,6 @@ public class SegregateEvenAndOddTest extends ParentTest {
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(4,6,8));
         SegregateEvenAndOdd sort = new SegregateEvenAndOdd();
         ArrayList<Integer> output = sort.sortByEvenAndOdd(input);
-        printTest(output);
+        print(output);
     }
 }

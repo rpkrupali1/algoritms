@@ -2,9 +2,8 @@ package recurssion;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import sort.ParentTest;
+import common.ParentTest;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -13,6 +12,7 @@ public class NChooseKCombinationsTest extends ParentTest {
     @Test
     public static void recurive_test000(){
         ArrayList<ArrayList<Integer>> actual = NChooseKCombinations.recursive(5,2);
+        printList(actual);
         ArrayList<ArrayList<Integer>> expected = new ArrayList<>();
         expected.add( new ArrayList<>(Arrays.asList(1, 2)));
         expected.add( new ArrayList<>(Arrays.asList(1, 3)));

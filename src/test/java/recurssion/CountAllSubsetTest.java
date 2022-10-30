@@ -2,7 +2,7 @@ package recurssion;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import sort.ParentTest;
+import common.ParentTest;
 
 public class CountAllSubsetTest extends ParentTest {
 

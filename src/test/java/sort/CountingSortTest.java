@@ -1,5 +1,6 @@
 package sort;
 
+import common.ParentTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import sort.methods.Counting;
@@ -14,7 +15,7 @@ public class CountingSortTest extends ParentTest {
         Counting sort = new Counting();
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(5, 8, 3, 9, 4, 1, 7));
         ArrayList<Integer> output = sort.counting_sort(input);
-        printTest(output);
+        print(output);
         Assert.assertTrue(isSorted(output));
     }
 
@@ -23,7 +24,7 @@ public class CountingSortTest extends ParentTest {
         Counting sort = new Counting();
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(400000,-400000));
         ArrayList<Integer> output = sort.counting_sort(input);
-        printTest(output);
+        print(output);
         Assert.assertTrue(isSorted(output));
     }
 }

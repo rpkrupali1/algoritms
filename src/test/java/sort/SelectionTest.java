@@ -1,5 +1,6 @@
 package sort;
 
+import common.ParentTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import sort.methods.Selection;
@@ -10,14 +11,14 @@ import java.util.Arrays;
 /**
  *
  */
-public class SelectionTest extends ParentTest{
+public class SelectionTest extends ParentTest {
 
     @Test
     public void test000(){
         Selection sort = new Selection();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(5, 8, 3, 9, 4, 1, 7));
         ArrayList<Integer> output = sort.selection_sort(input);
-        printTest(output);
+        print(output);
         Assert.assertTrue(isSorted(output));
     }
 
@@ -26,7 +27,7 @@ public class SelectionTest extends ParentTest{
         Selection sort = new Selection();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(1000000000));
         ArrayList<Integer> output = sort.selection_sort(input);
-        printTest(output);
+        print(output);
         Assert.assertTrue(isSorted(output));
     }
 
@@ -35,7 +36,7 @@ public class SelectionTest extends ParentTest{
         Selection sort = new Selection();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(-1000000000));
         ArrayList<Integer> output = sort.selection_sort(input);
-        printTest(output);
+        print(output);
         Assert.assertTrue(isSorted(output));
     }
 
@@ -44,7 +45,7 @@ public class SelectionTest extends ParentTest{
         Selection sort = new Selection();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(-1000000000, 0, 1000000000));
         ArrayList<Integer> output = sort.selection_sort(input);
-        printTest(output);
+        print(output);
         Assert.assertTrue(isSorted(output));
     }
 
@@ -53,7 +54,7 @@ public class SelectionTest extends ParentTest{
         Selection sort = new Selection();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(7, 7, 7, 7, 7));
         ArrayList<Integer> output = sort.selection_sort(input);
-        printTest(output);
+        print(output);
         Assert.assertTrue(isSorted(output));
     }
 
@@ -62,7 +63,7 @@ public class SelectionTest extends ParentTest{
         Selection sort = new Selection();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(-913743, 3241, 999999, 1243153, 0, 0, 999999999));
         ArrayList<Integer> output = sort.selection_sort(input);
-        printTest(output);
+        print(output);
         Assert.assertTrue(isSorted(output));
     }
 
@@ -71,7 +72,7 @@ public class SelectionTest extends ParentTest{
         Selection sort = new Selection();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(-5, -3, -1, 0, 1, 3, 5));
         ArrayList<Integer> output = sort.selection_sort(input);
-        printTest(output);
+        print(output);
         Assert.assertTrue(isSorted(output));
     }
 
@@ -80,7 +81,7 @@ public class SelectionTest extends ParentTest{
         Selection sort = new Selection();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(5, 3, 1, -10, -11, -100));
         ArrayList<Integer> output = sort.selection_sort(input);
-        printTest(output);
+        print(output);
         Assert.assertTrue(isSorted(output));
     }
 
@@ -89,7 +90,7 @@ public class SelectionTest extends ParentTest{
         Selection sort = new Selection();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(1000000000, -1000000000));
         ArrayList<Integer> output = sort.selection_sort(input);
-        printTest(output);
+        print(output);
         Assert.assertTrue(isSorted(output));
     }
 
@@ -98,7 +99,7 @@ public class SelectionTest extends ParentTest{
         Selection sort = new Selection();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(1, 2, 1, 3, 5));
         ArrayList<Integer> output = sort.selection_sort(input);
-        printTest(output);
+        print(output);
         Assert.assertTrue(isSorted(output));
     }
 
@@ -107,7 +108,7 @@ public class SelectionTest extends ParentTest{
         Selection sort = new Selection();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(-1, 2, 2, -1));
         ArrayList<Integer> output = sort.selection_sort(input);
-        printTest(output);
+        print(output);
         Assert.assertTrue(isSorted(output));
     }
 
@@ -116,7 +117,7 @@ public class SelectionTest extends ParentTest{
         Selection sort = new Selection();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 0, -1, -2));
         ArrayList<Integer> output = sort.selection_sort(input);
-        printTest(output);
+        print(output);
         Assert.assertTrue(isSorted(output));
     }
 
@@ -125,7 +126,7 @@ public class SelectionTest extends ParentTest{
         Selection sort = new Selection();
         ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList(10, 9, 4, 5, 6, 7));
         ArrayList<Integer> output = sort.selection_sort(input);
-        printTest(output);
+        print(output);
         Assert.assertTrue(isSorted(output));
     }
 
@@ -4133,7 +4134,7 @@ public class SelectionTest extends ParentTest{
                 91473581,
                 625775555));
         ArrayList<Integer> output = sort.selection_sort(input);
-        printTest(output);
+        print(output);
         Assert.assertTrue(isSorted(output));
     }
 
@@ -8141,7 +8142,7 @@ public class SelectionTest extends ParentTest{
                 998975544,
                 999124320));
         ArrayList<Integer> output = sort.selection_sort(input);
-        printTest(output);
+        print(output);
         Assert.assertTrue(isSorted(output));
     }
 
@@ -12149,7 +12150,7 @@ public class SelectionTest extends ParentTest{
                 -998475884,
                 -999757519));
         ArrayList<Integer> output = sort.selection_sort(input);
-        printTest(output);
+        print(output);
         Assert.assertTrue(isSorted(output));
     }
 
@@ -16157,7 +16158,7 @@ public class SelectionTest extends ParentTest{
                 3998,
                 3999));
         ArrayList<Integer> output = sort.selection_sort(input);
-        printTest(output);
+        print(output);
         Assert.assertTrue(isSorted(output));
     }
 
@@ -20165,7 +20166,7 @@ public class SelectionTest extends ParentTest{
                 -998733048,
                 -998990431));
         ArrayList<Integer> output = sort.selection_sort(input);
-        printTest(output);
+        print(output);
         Assert.assertTrue(isSorted(output));
     }
 }
