@@ -1,5 +1,6 @@
 package sort;
 
+import common.ParentTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import sort.examples.IntersectionOfTwoArrays;
@@ -15,7 +16,7 @@ public class IntersectionOfTwoArraysTest extends ParentTest {
         int[] nums1 = {1,2,2,1}, nums2 = {2,2};
         IntersectionOfTwoArrays ar = new IntersectionOfTwoArrays();
         ArrayList<Integer> actualOutput =  ar.usingHash(nums1,nums2);
-        printTest(actualOutput);
+        print(actualOutput);
         ArrayList<Integer> expectedOutput = new ArrayList<>(List.of(2));
         Assert.assertEquals(actualOutput,expectedOutput);
     }
@@ -25,7 +26,7 @@ public class IntersectionOfTwoArraysTest extends ParentTest {
         int[] nums1 = {4,9,5}, nums2 = {9,4,9,8,4};
         IntersectionOfTwoArrays ar = new IntersectionOfTwoArrays();
         ArrayList<Integer> actualOutput =  ar.usingHash(nums1,nums2);
-        printTest(actualOutput);
+        print(actualOutput);
         ArrayList<Integer> expectedOutput = new ArrayList<>(Arrays.asList(4,9));
         Assert.assertEquals(actualOutput,expectedOutput);
         Assert.assertEquals(actualOutput.size(),expectedOutput.size());

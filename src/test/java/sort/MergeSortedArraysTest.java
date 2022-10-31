@@ -1,5 +1,6 @@
 package sort;
 
+import common.ParentTest;
 import org.testng.annotations.Test;
 import sort.examples.MergeSortedArrays;
 
@@ -15,7 +16,7 @@ public class MergeSortedArraysTest extends ParentTest {
         ArrayList<Integer> second = new ArrayList<>(Arrays.asList(2,4,6,0,0,0));
         MergeSortedArrays sort = new MergeSortedArrays();
         ArrayList<Integer> output = sort.mergeSortedArray(first,second);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 
@@ -25,7 +26,7 @@ public class MergeSortedArraysTest extends ParentTest {
         ArrayList<Integer> second = new ArrayList<>(Arrays.asList(8,13,0,0));
         MergeSortedArrays sort = new MergeSortedArrays();
         ArrayList<Integer> output = sort.mergeSortedArray(first,second);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 
@@ -35,7 +36,7 @@ public class MergeSortedArraysTest extends ParentTest {
         ArrayList<Integer> second = new ArrayList<>(Arrays.asList(2,0));
         MergeSortedArrays sort = new MergeSortedArrays();
         ArrayList<Integer> output = sort.mergeSortedArray(first,second);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 
@@ -45,7 +46,7 @@ public class MergeSortedArraysTest extends ParentTest {
         ArrayList<Integer> second = new ArrayList<>(Arrays.asList(1,0));
         MergeSortedArrays sort = new MergeSortedArrays();
         ArrayList<Integer> output = sort.mergeSortedArray(first,second);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 
@@ -55,7 +56,7 @@ public class MergeSortedArraysTest extends ParentTest {
         ArrayList<Integer> second = new ArrayList<>(Arrays.asList(1,0));
         MergeSortedArrays sort = new MergeSortedArrays();
         ArrayList<Integer> output = sort.mergeSortedArray(first,second);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 
@@ -65,7 +66,7 @@ public class MergeSortedArraysTest extends ParentTest {
         ArrayList<Integer> second = new ArrayList<>(Arrays.asList(10,10,0,0));
         MergeSortedArrays sort = new MergeSortedArrays();
         ArrayList<Integer> output = sort.mergeSortedArray(first,second);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 
@@ -75,7 +76,7 @@ public class MergeSortedArraysTest extends ParentTest {
         ArrayList<Integer> second = new ArrayList<>(Arrays.asList(3,11,0,0));
         MergeSortedArrays sort = new MergeSortedArrays();
         ArrayList<Integer> output = sort.mergeSortedArray(first,second);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 
@@ -85,7 +86,7 @@ public class MergeSortedArraysTest extends ParentTest {
         ArrayList<Integer> second = new ArrayList<>(Arrays.asList(13,13,0,0));
         MergeSortedArrays sort = new MergeSortedArrays();
         ArrayList<Integer> output = sort.mergeSortedArray(first,second);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 
@@ -95,7 +96,7 @@ public class MergeSortedArraysTest extends ParentTest {
         ArrayList<Integer> second = new ArrayList<>(Arrays.asList(2, 3, 4, 13, 15, 0, 0, 0, 0, 0));
         MergeSortedArrays sort = new MergeSortedArrays();
         ArrayList<Integer> output = sort.mergeSortedArray(first,second);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 
@@ -105,7 +106,7 @@ public class MergeSortedArraysTest extends ParentTest {
         ArrayList<Integer> second = new ArrayList<>(Arrays.asList(45, 52, 53, 68,0,0,0,0));
         MergeSortedArrays sort = new MergeSortedArrays();
         ArrayList<Integer> output = sort.mergeSortedArray(first,second);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 
@@ -115,7 +116,7 @@ public class MergeSortedArraysTest extends ParentTest {
         ArrayList<Integer> second = new ArrayList<>(Arrays.asList(1, 1, 1, 1, 1, 2, 0, 0, 0, 0, 0, 0));
         MergeSortedArrays sort = new MergeSortedArrays();
         ArrayList<Integer> output = sort.mergeSortedArray(first,second);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 
@@ -125,7 +126,7 @@ public class MergeSortedArraysTest extends ParentTest {
         ArrayList<Integer> second = new ArrayList<>(Arrays.asList(90, 100, 100, 200, 200, 450, 450, 0, 0, 0, 0, 0, 0, 0));
         MergeSortedArrays sort = new MergeSortedArrays();
         ArrayList<Integer> output = sort.mergeSortedArray(first,second);
-        printTest(output);
+        print(output);
         isSorted(output);
     }
 }

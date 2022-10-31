@@ -1,8 +1,9 @@
 package sort;
 
+import common.ParentTest;
 import org.testng.annotations.Test;
 
-public class PracticeTest extends ParentTest{
+public class PracticeTest extends ParentTest {
 
     @Test
     public void qq3(){

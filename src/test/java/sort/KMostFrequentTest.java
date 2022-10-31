@@ -1,5 +1,6 @@
 package sort;
 
+import common.ParentTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import sort.examples.KMostFrequent;
@@ -7,7 +8,7 @@ import sort.examples.KMostFrequent;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class KMostFrequentTest extends ParentTest{
+public class KMostFrequentTest extends ParentTest {
     @Test
     public void test000(){
         ArrayList<String> input = new ArrayList<>(Arrays.asList("car", "bus", "taxi", "car", "driver", "candy", "race", "car", "driver", "fare", "taxi"));
@@ -40,7 +41,7 @@ public class KMostFrequentTest extends ParentTest{
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(1, 2, 3, 2, 4, 3, 1));
         KMostFrequent kMostFrequent = new KMostFrequent();
         ArrayList<Integer> actualOutput = kMostFrequent.kMostFrequentElements_pq(input,2);
-        printTest(actualOutput);
+        print(actualOutput);
         ArrayList<Integer> expectedOutput =new ArrayList<>(Arrays.asList(3,2));
         Assert.assertEquals(actualOutput,expectedOutput);
     }
@@ -50,7 +51,7 @@ public class KMostFrequentTest extends ParentTest{
         ArrayList<Integer> input = new ArrayList<>(Arrays.asList(1, 2, 1, 2, 3, 1));
         KMostFrequent kMostFrequent = new KMostFrequent();
         ArrayList<Integer> actualOutput = kMostFrequent.kMostFrequentElements_pq(input,1);
-        printTest(actualOutput);
+        print(actualOutput);
         ArrayList<Integer> expectedOutput =new ArrayList<>(Arrays.asList(1));
         Assert.assertEquals(actualOutput,expectedOutput);
     }

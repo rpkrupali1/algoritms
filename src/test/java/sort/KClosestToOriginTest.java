@@ -1,10 +1,11 @@
 package sort;
 
+import common.ParentTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import sort.examples.KClosestToOrigin;
 
-public class KClosestToOriginTest extends ParentTest{
+public class KClosestToOriginTest extends ParentTest {
 
     @Test
     public void test000(){

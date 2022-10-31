@@ -1,5 +1,6 @@
 package sort;
 
+import common.ParentTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import sort.examples.KthLargestInAStream;
@@ -7,7 +8,7 @@ import sort.examples.KthLargestInAStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class KthLargestInAStreamTest extends ParentTest{
+public class KthLargestInAStreamTest extends ParentTest {
 
     @Test
     public void bruteForce_test000(){
@@ -16,7 +17,7 @@ public class KthLargestInAStreamTest extends ParentTest{
         int k = 2;
         KthLargestInAStream st = new KthLargestInAStream();
         ArrayList<Integer> actualOutput = st.brute_force(k,initialStream,appendStream);
-        printTest(actualOutput);
+        print(actualOutput);
         ArrayList<Integer> expectedOutput = new ArrayList<>(Arrays.asList(5,5,6));
         Assert.assertEquals(actualOutput,expectedOutput);
     }
@@ -28,7 +29,7 @@ public class KthLargestInAStreamTest extends ParentTest{
         int k = 2;
         KthLargestInAStream st = new KthLargestInAStream();
         ArrayList<Integer> actualOutput = st.min_heap(k,initialStream,appendStream);
-        printTest(actualOutput);
+        print(actualOutput);
         ArrayList<Integer> expectedOutput = new ArrayList<>(Arrays.asList(5,5,6));
         Assert.assertEquals(actualOutput,expectedOutput);
     }
@@ -40,7 +41,7 @@ public class KthLargestInAStreamTest extends ParentTest{
         int k = 3;
         KthLargestInAStream st = new KthLargestInAStream();
         ArrayList<Integer> actualOutput = st.min_heap(k,initialStream,appendStream);
-        printTest(actualOutput);
+        print(actualOutput);
         ArrayList<Integer> expectedOutput = new ArrayList<>(Arrays.asList(5,6,6));
         Assert.assertEquals(actualOutput,expectedOutput);
     }

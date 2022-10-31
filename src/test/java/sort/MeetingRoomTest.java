@@ -1,5 +1,6 @@
 package sort;
 
+import common.ParentTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import sort.examples.MeetingRooms;
@@ -7,7 +8,7 @@ import sort.examples.MeetingRooms;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class MeetingRoomTest extends ParentTest{
+public class MeetingRoomTest extends ParentTest {
 
     @Test
     public void test000(){
