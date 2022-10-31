@@ -54,13 +54,14 @@ public class NChooseKCombinations {
     static void recursive_combination(int current_number,int n, int k,
                                       ArrayList<Integer> current,ArrayList<ArrayList<Integer>> result){
         if(k==current.size()){
-            result.add(current);
+            result.add(new ArrayList<>(current));
             return;
         }
         if(current_number==n+1)
             return;
         current.add(current_number);
         recursive_combination(current_number+1,n,k,current,result);
+        current.remove(current.size()-1);
         recursive_combination(current_number+1,n,k,current,result);
     }
 }
