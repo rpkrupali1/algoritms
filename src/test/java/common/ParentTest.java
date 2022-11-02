@@ -8,6 +8,13 @@ public class ParentTest {
             System.out.print(integer + " ");
         }
     }
+
+    public void printStrings(ArrayList<String> arr){
+        for (String integer : arr) {
+            System.out.print(integer + " ");
+        }
+    }
+
     public static void printList(ArrayList<ArrayList<Integer>>arr){
         for (int i = 0; i < arr.size(); i++) {
             System.out.print("[ ");
