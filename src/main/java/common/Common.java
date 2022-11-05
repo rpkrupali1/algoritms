@@ -1,9 +1,16 @@
 package common;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
-public class common {
-    static void swap(ArrayList<Integer>arr,int index1, int index2){
+public class Common {
+    public static void swap(ArrayList<Integer>arr,int index1, int index2){
+        int temp = arr.get(index1);
+        arr.set(index1, arr.get(index2));
+        arr.set(index2,temp);
+    }
+
+    public static void swap(LinkedList<Integer> arr, int index1, int index2){
         int temp = arr.get(index1);
         arr.set(index1, arr.get(index2));
         arr.set(index2,temp);
