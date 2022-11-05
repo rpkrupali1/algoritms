@@ -39,4 +39,17 @@ public class IntersectionOfThreeSortedArraysTest extends ParentTest {
         ArrayList<Integer> expectedResult = new ArrayList<>(Arrays.asList(1,5));
         Assert.assertEquals(actualResult,expectedResult);
     }
+
+    @Test
+    public void pointer_test001(){
+        ArrayList<Integer> arr1 = new ArrayList<>(Arrays.asList(1, 2, 2, 2, 9)),
+                arr2 = new ArrayList<>(Arrays.asList(1, 1, 2, 2)),
+                arr3 = new ArrayList<>(Arrays.asList(1, 1, 1, 2, 2, 2));
+        sort.examples.IntersectionOfThreeSortedArrays ir = new sort.examples.IntersectionOfThreeSortedArrays();
+        ArrayList<Integer> actualResult = ir.pointer(arr1,arr2,arr3);
+        print(actualResult);
+        ArrayList<Integer> expectedResult = new ArrayList<>(Arrays.asList(1,2,2));
+        Assert.assertEquals(actualResult,expectedResult);
+    }
+
 }
