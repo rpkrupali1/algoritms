@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * Given three integer arrays arr1, arr2 and arr3 sorted in strictly increasing order, return sorted array of only the integers that appeared in all three arrays.
- *
+ * <p>
  * Example 1:
  * Input: arr1 = [1,2,3,4,5], arr2 = [1,2,5,7,9], arr3 = [1,3,4,5,8]
  * Output: [1,5]
@@ -13,11 +13,11 @@ import java.util.ArrayList;
 public class IntersectionOfThreeSortedArrays {
     public int[] threeSorted_bruteForce(int[]arr1, int[]arr2, int[]arr3){
         ArrayList<Integer> output = new ArrayList<>();
-        for (int i = 0; i < arr1.length; i++) {
-            for (int j = 0; j < arr2.length; j++) {
-                for (int k = 0; k < arr3.length; k++) {
-                    if(arr1[i]==arr2[j] && arr2[j]==arr3[k]){
-                        output.add(arr1[i]);
+        for (int value : arr1) {
+            for (int i : arr2) {
+                for (int j : arr3) {
+                    if (value == i && i == j) {
+                        output.add(value);
                         break;
                     }
                 }
@@ -48,7 +48,7 @@ public class IntersectionOfThreeSortedArrays {
      * We simulate merging the three arrays into one.
      * While doing so, we will always consider the elements of the three arrays in sorted order,
      * thus we can check for equality of the three elements being considered and get the common elements.
-     *
+     * <p>
      * Time - O(l + m + n)
      * Space - O(l + m +n)
      */
@@ -56,15 +56,23 @@ public class IntersectionOfThreeSortedArrays {
         ArrayList<Integer> result = new ArrayList<>();
         int i=0,j=0,k=0;
         while ((i<arr1.size() && j<arr2.size() && k<arr3.size())){
-            if(arr1.get(i) == arr2.get(j) && arr1.get(i) == arr3.get(k)){
+            if(arr1.get(i).equals(arr2.get(j)) && arr1.get(i).equals(arr3.get(k))){
                 result.add(arr1.get(i));
                 i++;j++;k++;
-            } else if (arr1.get(i) <= arr2.get(j) && arr1.get(i) <= arr3.get(k))
-                i++;
-            else if (arr2.get(j) <= arr1.get(i) && arr2.get(j) <= arr3.get(k))
-                j++;
-            else k++;
+            } else {
+                int min = Math.min(arr1.get(i) , arr2.get(j));
+                min = Math.min(arr3.get(k),min);
+                if (arr1.get(i)==min)
+                    i++;
+                else if (arr2.get(j) == min)
+                    j++;
+                else k++;
+            }
         }
+
+        if(result.isEmpty())
+            result.add(-1);
+
         return result;
     }
 }
