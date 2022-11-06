@@ -16,6 +16,14 @@ public class Common {
         arr.set(index2,temp);
     }
 
+    public static String swap(String s, int index1, int index2){
+        char[] chars = s.toCharArray();
+        char temp = chars[index1];
+        chars[index1] = chars[index2];
+        chars[index2] = temp;
+        return new String(chars);
+    }
+
     static void reverse(ArrayList<Integer>arr,int start){
         int i = start,j=arr.size()-1;
         while (i<j){
