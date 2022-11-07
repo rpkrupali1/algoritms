@@ -7,6 +7,8 @@ public class PowerOfNumber {
     public static int recursive(int n, int p){
         if(p==0)
             return 1;
+        if(p==1)
+            return n;
         return n * recursive(n,p-1);
     }
 }
