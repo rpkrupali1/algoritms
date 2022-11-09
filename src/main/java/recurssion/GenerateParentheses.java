@@ -23,9 +23,9 @@ public class GenerateParentheses {
     private static ArrayList<String> result = new ArrayList<>();
     public static ArrayList<String> recursive(int n){
         helper(n,0,0,"");
-        Set<String> hs = new HashSet<>(result);
-        ArrayList<String> finalResult = new ArrayList<>(hs);
-        return finalResult;
+//        Set<String> hs = new HashSet<>(result);
+//        ArrayList<String> finalResult = new ArrayList<>(hs);
+        return result;
     }
 
     private static void helper(int n, int open,int close, String s){
@@ -36,8 +36,8 @@ public class GenerateParentheses {
         if(open<n)
             helper(n,open+1,close,s +"{" );
 
-        if(close<n)
-            helper(n,open,close+1,s +"}" );
+//        if(close<n)
+//            helper(n,open,close+1,s +"}" );
 
         if(close<open)
             helper(n,open,close+1,s +"}" );
