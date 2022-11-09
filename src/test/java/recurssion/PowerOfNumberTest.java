@@ -58,4 +58,10 @@ public class PowerOfNumberTest {
         long actual = PowerOfNumber.divide_conquer(2, 32);
         Assert.assertEquals(actual,294967268);
     }
+
+    @Test
+    public void divide_conquer_test005(){
+        long actual = PowerOfNumber.divide_conquer(10000, 0);
+        Assert.assertEquals(actual,1);
+    }
 }
