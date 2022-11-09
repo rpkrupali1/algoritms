@@ -8,18 +8,20 @@ package recurssion;
  * Output: 1024
  */
 public class PowerOfNumber {
-    private static long mod = 1000000007;
+    private static final long mod = 1000000007;
     public static long mod_approach(long n, long p){
+        if(p==0)
+            return 1L;
         if( n==1 || n==0)
             return n;
-        if(p==0)
-            return 1;
         n= n%mod;
         return (n * mod_approach(n,p-1))%mod;
     }
 
     public static long divide_conquer(long n , long p){
-        if( n==1 || n==0)
+        if(p==0)
+            return 1L;
+        if(n==1 || n==0)
             return n;
         if(p==1)
             return n%mod;
