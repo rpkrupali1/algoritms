@@ -5,9 +5,10 @@ package recurssion;
  */
 public class PowerOfNumber {
     public static int recursive(int n, int p){
-        if(p==0)
-            return 1;
-        if(p==1)
+        //System.out.println(p);
+//        if(p==0)
+//            return 1;
+        if(p==1 || n==1 || n==0)
             return n;
         return n * recursive(n,p-1);
     }

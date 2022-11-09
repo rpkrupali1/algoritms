@@ -20,7 +20,6 @@ public class WordsFromPhoneNumber {
     public static ArrayList<String> recursion(String phone_number) {
         // remove 0 and 1 from string as they do not have any mapping in phonepad"
         phone_number = phone_number.replace("0","").replace("1","");
-        System.out.println(phone_number);
         if(phone_number.length()==0 || phone_number==""){
             result.add("");
             return result;
