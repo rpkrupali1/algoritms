@@ -27,6 +27,18 @@ public class ParentTest {
         }
     }
 
+    public static void printList2(ArrayList<ArrayList<String>>arr){
+        for (int i = 0; i < arr.size(); i++) {
+            System.out.print("[ ");
+            for (int j = 0; j < arr.get(i).size(); j++) {
+                System.out.print(arr.get(i).get(j));
+                System.out.print(" ");
+            }
+            System.out.print("]");
+            System.out.println();
+        }
+    }
+
     public void print(int[] arr){
         for (int j : arr) {
             System.out.print(j + " ");
