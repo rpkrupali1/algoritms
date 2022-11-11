@@ -24,6 +24,12 @@ public class Common {
         return new String(chars);
     }
 
+    public static void swap(int[] arr, int index1, int index2){
+        int temp = arr[index1];
+        arr[index1] = arr[index2];
+        arr[index2] = temp;
+    }
+
     static void reverse(ArrayList<Integer>arr,int start){
         int i = start,j=arr.size()-1;
         while (i<j){
