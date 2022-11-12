@@ -30,7 +30,7 @@ public class NQueenProblem extends Common {
     }
 
     private static void helper(int i, int n, int[] columns){
-        if(is_valid(columns,i-1))
+        if(is_invalid(columns,i-1))
             return;
         else if (i==n) {
             result.add(construct(n,columns));
@@ -44,7 +44,7 @@ public class NQueenProblem extends Common {
         }
     }
 
-    private static boolean is_valid(int[] columns, int previousQ){
+    private static boolean is_invalid(int[] columns, int previousQ){
         for (int i = 0; i < previousQ; i++) {
             if(columns[i]==columns[previousQ]
                     || Math.abs(i-previousQ)==Math.abs(columns[i]-columns[previousQ]))
