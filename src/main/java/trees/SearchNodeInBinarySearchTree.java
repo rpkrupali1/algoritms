@@ -9,7 +9,7 @@ package trees;
  * "value": 5
  * Output: 0
  */
-public class SearchNodeInBonarySearchTree {
+public class SearchNodeInBinarySearchTree {
     public static Boolean search_node_in_bst(BinaryTreeNode root, Integer value) {
         while (root!=null){
             if(root.value.equals(value))

@@ -11,7 +11,7 @@ public class SearchNodeInBinarySearchTreeTest {
         btn.right = new BinaryTreeNode(5);
         btn.right.left = new BinaryTreeNode(4);
         btn.right.right = new BinaryTreeNode(6);
-        boolean actual = SearchNodeInBonarySearchTree.search_node_in_bst(btn,4);
+        boolean actual = SearchNodeInBinarySearchTree.search_node_in_bst(btn,4);
         Assert.assertEquals(actual,true);
     }
 
@@ -20,7 +20,7 @@ public class SearchNodeInBinarySearchTreeTest {
         BinaryTreeNode btn = new BinaryTreeNode(20);
         btn.left = new BinaryTreeNode(10);
         btn.right = new BinaryTreeNode(30);
-        boolean actual = SearchNodeInBonarySearchTree.search_node_in_bst(btn,5);
+        boolean actual = SearchNodeInBinarySearchTree.search_node_in_bst(btn,5);
         Assert.assertEquals(actual,false);
     }
 }
