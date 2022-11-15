@@ -1,8 +1,11 @@
 package common;
 
+import trees.BinaryTreeNode;
+
 import java.util.ArrayList;
 
 public class ParentTest {
+    private static ArrayList<Integer> result = new ArrayList<>();
     public void print(ArrayList<Integer> arr){
         for (Integer integer : arr) {
             System.out.print(integer + " ");
@@ -52,5 +55,14 @@ public class ParentTest {
                 return false;
         }
         return true;
+    }
+
+    public static ArrayList<Integer> convertToArray(BinaryTreeNode bst){
+        if(bst==null)
+            return result;
+        result.add(bst.value);
+        convertToArray(bst.left);
+        convertToArray(bst.right);
+        return result;
     }
 }

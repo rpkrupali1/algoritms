@@ -1,11 +1,13 @@
 package trees;
 
-class BinaryTreeNode {
-    Integer value;
-    BinaryTreeNode left;
-    BinaryTreeNode right;
+import java.util.ArrayList;
 
-    BinaryTreeNode(Integer value) {
+public class BinaryTreeNode {
+    public Integer value;
+    public BinaryTreeNode left;
+    public BinaryTreeNode right;
+
+    public BinaryTreeNode(Integer value) {
         this.value = value;
         this.left = null;
         this.right = null;
