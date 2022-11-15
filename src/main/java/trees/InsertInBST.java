@@ -2,6 +2,11 @@ package trees;
 
 import java.util.ArrayList;
 
+/**
+ * Given an array of numbers, build a binary search tree(BST) by inserting the values sequentially inside an initially empty BST.
+ * Example
+ *  "values": [7, 5, 9]
+ */
 public class InsertInBST {
     public static BinaryTreeNode build_a_bst(ArrayList<Integer> values){
         BinaryTreeNode bst = null;
