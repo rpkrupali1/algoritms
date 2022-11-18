@@ -30,7 +30,7 @@ public class CheckIfSumPossible {
             return true;
 
         //exclude
-        return helper(n+1,sum+num,arr,target);
+        return helper(n+1,sum,arr,target);
     }
 
 }
