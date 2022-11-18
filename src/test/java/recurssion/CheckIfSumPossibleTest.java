@@ -43,4 +43,11 @@ public class CheckIfSumPossibleTest extends ParentTest {
         boolean actual = CheckIfSumPossible.checkSum(input,50);
         Assert.assertTrue(actual);
     }
+
+    @Test
+    public void test006(){
+        ArrayList<Long> input = new ArrayList<>(Arrays.asList(10L,20L));
+        boolean actual = CheckIfSumPossible.checkSum(input,0);
+        Assert.assertFalse(actual);
+    }
 }

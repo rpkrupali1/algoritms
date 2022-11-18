@@ -31,6 +31,8 @@ public class CheckIfSumPossible {
 
         //exclude
         return helper(n+1,sum,arr,target);
+
+        //return helper(n+1,sum+num,arr,target) || helper(n+1,sum,arr,target);
     }
 
 }
