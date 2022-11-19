@@ -30,7 +30,7 @@ public class DeleteFromBST {
         BinaryTreeNode curr = root;
         BinaryTreeNode prev = null;
         BinaryTreeNode child = null;
-        BinaryTreeNode succ = null;
+        BinaryTreeNode succ;
         // search the node to be deleted as current and get prev
         while (curr!=null){
             if(curr.value == value)
@@ -60,7 +60,7 @@ public class DeleteFromBST {
         // case 2: node has one child
         if(curr.left!=null && curr.right==null)
             child = curr.left;
-        if(curr.left==null && curr.right!=null)
+        if(curr.left == null)
             child = curr.right;
         if(child!=null){
             if(prev==null) {
@@ -73,43 +73,16 @@ public class DeleteFromBST {
             return root;
         }
         // case 3 : node with two childs
-        if(curr.right!=null && curr.left!=null){
-            succ = curr.right;
-            prev = curr;
-            while (succ.left!=null){
-                prev = succ;
-                succ = succ.left;
-            }
-            curr.value= succ.value;
-            if(succ == prev.left)
-                prev.left = succ.right;
-            else prev.right = succ.right;
-            return root;        }
-
+        succ = curr.right;
+        prev = curr;
+        while (succ.left!=null){
+            prev = succ;
+            succ = succ.left;
+        }
+        curr.value= succ.value;
+        if(succ == prev.left)
+            prev.left = succ.right;
+        else prev.right = succ.right;
         return root;
-    }
-
-    //get successor
-    private static BinaryTreeNode successor(BinaryTreeNode root, BinaryTreeNode node){
-        if(root==null)
-            return null;
-        BinaryTreeNode curr = null;
-        BinaryTreeNode ancestor = null;
-        if(node.right!=null){
-            curr = node.right;
-            while (curr.left!=null){
-                curr = curr.left;
-            }
-            return curr;
-        }
-        curr = root;
-        while (!curr.value.equals(node.value)){
-            if(node.value< curr.value){
-                ancestor = curr;
-                curr = curr.left;
-            }
-            else curr = curr.right;
-        }
-        return ancestor;
     }
 }

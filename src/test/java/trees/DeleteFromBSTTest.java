@@ -48,4 +48,23 @@ public class DeleteFromBSTTest extends ParentTest {
         print(expected);
         Assert.assertEquals(actual,expected);
     }
+
+    @Test
+    public void test006(){
+        BinaryTreeNode btn = new BinaryTreeNode(523);
+        btn.left = new BinaryTreeNode(512);
+        btn.right = new BinaryTreeNode(1000);
+        btn.left.left =  new BinaryTreeNode(251);
+        btn.left.right = new BinaryTreeNode(513);
+        btn.right.right = new BinaryTreeNode(1000000000);
+        BinaryTreeNode actualResult = DeleteFromBST.delete(btn,new ArrayList<>(Arrays.asList(523, 513, 1000000000, 512, 109)));
+        ArrayList<Integer> actual = convertToArray(actualResult);
+        print(actual);
+
+        BinaryTreeNode output = new BinaryTreeNode(1000);
+        output.left = new BinaryTreeNode(251);
+        ArrayList<Integer> expected = convertToArray(output);
+        print(expected);
+        Assert.assertEquals(actual,expected);
+    }
 }
