@@ -20,4 +20,14 @@ public class AllcombinationsWithSumEqualToTargetTest extends ParentTest {
         expected.add(new ArrayList<>(Arrays.asList(3)));
         Assert.assertEquals(actual,expected);
     }
+
+    @Test
+    public void test001(){
+        ArrayList<Integer> input = new ArrayList<>(Arrays.asList(1,1,1,1));
+        ArrayList<ArrayList<Integer>> actual = AllcombinationsWithSumEqualToTarget.recursive_approach(input,2);
+        printList(actual);
+        ArrayList<ArrayList<Integer>> expected = new ArrayList<>();
+        expected.add(new ArrayList<>(Arrays.asList(1,1)));
+        Assert.assertEquals(actual,expected);
+    }
 }
