@@ -1,11 +1,12 @@
 package common;
 
+import sort.examples.LinkedListNode;
 import trees.BinaryTreeNode;
 
 import java.util.ArrayList;
 
 public class ParentTest {
-    private static ArrayList<Integer> result = new ArrayList<>();
+    private static final ArrayList<Integer> result = new ArrayList<>();
     public void print(ArrayList<Integer> arr){
         for (Integer integer : arr) {
             System.out.print(integer + " ");
@@ -19,10 +20,10 @@ public class ParentTest {
     }
 
     public static void printList(ArrayList<ArrayList<Integer>>arr){
-        for (int i = 0; i < arr.size(); i++) {
+        for (ArrayList<Integer> integers : arr) {
             System.out.print("[ ");
-            for (int j = 0; j < arr.get(i).size(); j++) {
-                System.out.print(arr.get(i).get(j));
+            for (Integer integer : integers) {
+                System.out.print(integer);
                 System.out.print(" ");
             }
             System.out.print("]");
@@ -31,10 +32,10 @@ public class ParentTest {
     }
 
     public static void printList2(ArrayList<ArrayList<String>>arr){
-        for (int i = 0; i < arr.size(); i++) {
+        for (ArrayList<String> strings : arr) {
             System.out.print("[ ");
-            for (int j = 0; j < arr.get(i).size(); j++) {
-                System.out.print(arr.get(i).get(j));
+            for (String string : strings) {
+                System.out.print(string);
                 System.out.print(" ");
             }
             System.out.print("]");
@@ -64,5 +65,22 @@ public class ParentTest {
         convertToArray(bst.left);
         convertToArray(bst.right);
         return result;
+    }
+
+    public ArrayList<Integer> convertToArray(LinkedListNode node){
+        ArrayList<Integer> result = new ArrayList<>();
+        while (node!=null){
+            result.add(node.value);
+            node = node.next;
+        }
+        return result;
+    }
+
+    public void print(LinkedListNode node){
+        while (node!=null){
+            System.out.print(node.value + " ");
+            node = node.next;
+        }
+        System.out.println();
     }
 }
