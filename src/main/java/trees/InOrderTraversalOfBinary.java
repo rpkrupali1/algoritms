@@ -5,9 +5,11 @@ import java.util.ArrayList;
 /**
  * Inorder Traversal Of A Binary Tree
  * Given a binary tree, return the inorder traversal of its node values.
- * Example One :  0/1\2 /3\4 /null\null
+ * Example One :
+ * Input: 0/1\2 /3\4 /null\null
  * Output: [3, 1, 4, 0, 2]
- * Example Two : 0/1\null null\2 3/null
+ * Example Two :
+ * Input: 0/1\null null\2 3/null
  * Output: [1, 3, 2, 0]
  */
 public class InOrderTraversalOfBinary {
