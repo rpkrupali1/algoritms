@@ -13,11 +13,11 @@ import java.util.ArrayList;
  */
 public class CheckIfSumPossible {
     public static boolean checkSum(ArrayList<Long> arr, long k){
-        return helper(0,0,arr,k);
+        return helper(0,0,0,arr,k);
     }
 
-    private static boolean helper(int n, long sum, ArrayList<Long> arr,long target){
-        if(n>0 && sum==target)
+    private static boolean helper(int n, int count,long sum, ArrayList<Long> arr,long target){
+        if(count>0 && sum==target)
             return true;
 
         if(n==arr.size()){
@@ -26,11 +26,11 @@ public class CheckIfSumPossible {
 
         //include and recurse
         long num = arr.get(n);
-        if(helper(n+1,sum+num,arr,target))
+        if(helper(n+1,count+1,sum+num,arr,target))
             return true;
 
         //exclude
-        return helper(n+1,sum,arr,target);
+        return helper(n+1,count,sum,arr,target);
 
         //return helper(n+1,sum+num,arr,target) || helper(n+1,sum,arr,target);
     }
