@@ -33,11 +33,9 @@ public class ZigzagLevelOrderTraversalOfBinaryTree {
                         zigzag = false;
                     }
                     else {
-                        {
                             if (node.right!=null) que.add(node.right);
                             if(node.left!=null) que.add(node.left);
                             zigzag = true;
-                        }
                     }
                 }
             }
