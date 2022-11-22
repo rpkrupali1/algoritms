@@ -1,6 +1,7 @@
 package trees;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 
 /**
@@ -17,29 +18,27 @@ import java.util.LinkedList;
 public class ZigzagLevelOrderTraversalOfBinaryTree {
     public static ArrayList<ArrayList<Integer>> zigzag(BinaryTreeNode root){
         ArrayList<ArrayList<Integer>> result = new ArrayList<>();
+        if(root==null)
+            return result;
         LinkedList<BinaryTreeNode> que = new LinkedList<>();
         que.add(root);
+        boolean zigzag = false;
         while (que.size()>0){
             ArrayList<Integer> subResult = new ArrayList<>();
             int n = que.size();
-            boolean zigzag = false;
             for (int i = 0; i < n; i++) {
                 BinaryTreeNode node = que.poll();
                 if(node!=null){
                     subResult.add(node.value);
-                    if(zigzag){
-                        if(node.left!=null) que.add(node.left);
-                        if (node.right!=null) que.add(node.right);
-                        zigzag = false;
-                    }
-                    else {
-                            if (node.right!=null) que.add(node.right);
-                            if(node.left!=null) que.add(node.left);
-                            zigzag = true;
-                    }
+                    if(node.left!=null) que.add(node.left);
+                    if (node.right!=null) que.add(node.right);
                 }
             }
-            result.add(subResult);
+            if(subResult.size()>0) {
+                if(zigzag) Collections.reverse(subResult);
+                result.add(subResult);
+            }
+            zigzag = !zigzag;
         }
         return result;
     }
