@@ -2,12 +2,15 @@ package trees;
 
 /**
  * Given a binary tree, find its diameter.
+     * The diameter of binary tree is the length of its longest path between any two leaf nodes of tree
+     * The path may or may not pass through root
  * Example One
- * INput: 0| 1,2 | 3,4|
- * Output: 3
+ * <img src="./images/BinaryTree1.png" />
+     * Input: 0| 1,2 | 3,4|
+     * Output: 3
  * Example Two
- * Input: 0 |  1, null, | 2, 3, | 4, null, null, 5
- * Output:  4
+     * Input: 0 |  1, null, | 2, 3, | 4, null, null, 5
+     * Output:  4
  */
 public class DiameterOfBinaryTree {
     private static int diameter = 0;
