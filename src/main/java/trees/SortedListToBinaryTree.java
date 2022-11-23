@@ -31,8 +31,8 @@ public class SortedListToBinaryTree {
     static BinaryTreeNode helper(ArrayList<Integer> arr, int start, int end){
         if (start>end)
             return null;
-        if(start==end)
-            return new BinaryTreeNode(arr.get(start));
+//        if(start==end)
+//            return new BinaryTreeNode(arr.get(start));
         int mid = start + (end-start)/2;
         BinaryTreeNode root = new BinaryTreeNode(arr.get(mid));
         root.left = helper(arr,start,mid-1);
