@@ -1,6 +1,7 @@
 package trees;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  * Right Side View Of A Binary Tree
@@ -24,10 +25,28 @@ public class RightSideViewOfBinaryTree {
     private static void helper(BinaryTreeNode root,int level){
         if(root==null)
             return;
-        if(result.size()==level){
+        if(result.size()==level)
             result.add(root.value);
-        }
         helper(root.right,level+1);
         helper(root.left,level+1);
+    }
+
+    public static ArrayList<Integer> bfs(BinaryTreeNode root){
+        if(root==null)
+            return result;
+        LinkedList<BinaryTreeNode> q = new LinkedList<>();
+        q.add(root);
+        while (q.size()>0){
+            int n = q.size();
+            BinaryTreeNode node = null;
+            for (int i = 0; i < n; i++) {
+                node = q.poll();
+                if(node.left!=null) q.add(node.left);
+                if(node.right!=null) q.add(node.right);
+            }
+            if(node!=null)
+                result.add(node.value);
+        }
+        return result;
     }
 }
