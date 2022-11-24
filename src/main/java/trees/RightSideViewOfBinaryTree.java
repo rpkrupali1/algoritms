@@ -41,8 +41,10 @@ public class RightSideViewOfBinaryTree {
             BinaryTreeNode node = null;
             for (int i = 0; i < n; i++) {
                 node = q.poll();
-                if(node.left!=null) q.add(node.left);
-                if(node.right!=null) q.add(node.right);
+                if(node!=null) {
+                    if (node.left != null) q.add(node.left);
+                    if (node.right != null) q.add(node.right);
+                }
             }
             if(node!=null)
                 result.add(node.value);
