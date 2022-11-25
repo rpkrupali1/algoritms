@@ -47,14 +47,10 @@ public class IsItBST {
                 BinaryTreeNode node = q.poll();
                 if(node!=null) {
                     int val = node.value;
-                    if (node.left != null) {
-                        if (node.left.value > val)
-                            return false;
-                    }
-                    if (node.right != null) {
-                        if (node.right.value < val)
-                            return false;
-                    }
+                    if (node.left != null && node.left.value > val)
+                        return false;
+                    if (node.right != null && node.right.value < val)
+                        return false;
                 }
             }
         }
