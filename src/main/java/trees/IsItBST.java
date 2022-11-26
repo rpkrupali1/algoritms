@@ -21,18 +21,17 @@ import java.util.LinkedList;
  */
 public class IsItBST {
     public static boolean dfs(BinaryTreeNode root){
-        return helper(root);
+        return helper(root,Integer.MIN_VALUE,Integer.MAX_VALUE );
     }
 
-    private static boolean helper (BinaryTreeNode root){
+    private static boolean helper (BinaryTreeNode root, Integer min, Integer max){
         if(root==null)
             return true;
-        if(root.left!=null){
-            if(root.left.value >= root.value)
-                return false;
-            else return true;
-        }
-        return false;
+        if((max!=null && root.value > max) || (min!=null && root.value < min))
+            return false;
+        boolean left = helper(root.left, min, root.value);
+        boolean right = helper(root.right, root.value, max);
+        return left && right ;
     }
 
     public static boolean bfs(BinaryTreeNode root){
@@ -47,10 +46,16 @@ public class IsItBST {
                 BinaryTreeNode node = q.poll();
                 if(node!=null) {
                     int val = node.value;
-                    if (node.left != null && node.left.value > val)
-                        return false;
-                    if (node.right != null && node.right.value < val)
-                        return false;
+                    if (node.left != null) {
+                        if(node.left.value > val)
+                            return false;
+                        else q.add(node.left);
+                    }
+                    if (node.right != null) {
+                        if(node.right.value < val)
+                            return false;
+                        else q.add(node.right);
+                    }
                 }
             }
         }
