@@ -42,4 +42,15 @@ public class AllPathsOfTreeTest extends ParentTest {
         expected.add(new ArrayList<>(List.of(1, 3,7)));
         Assert.assertEquals(actual,expected);
     }
+
+    @Test
+    public void test005(){
+        BinaryTreeNode input = new BinaryTreeNode(100);
+        input.right = new BinaryTreeNode(200);
+        ArrayList<ArrayList<Integer>> actual = AllPathsOfTree.dfs(input);
+        printList(actual);
+        ArrayList<ArrayList<Integer>> expected = new ArrayList<>();
+        expected.add(new ArrayList<>(List.of(100, 200)));
+        Assert.assertEquals(actual,expected);
+    }
 }

@@ -41,12 +41,14 @@ public class AllPathsOfTree {
 
         slate.add(root.value);
 
-        if(root.left!=null)
-            helper(root.left,slate);
-        slate.remove(slate.size()-1);
+        if(root.left!=null) {
+            helper(root.left, slate);
+            slate.remove(slate.size() - 1);
+        }
 
-        if(root.right!=null)
-            helper(root.right,slate);
-        slate.remove(slate.size()-1);
+        if(root.right!=null) {
+            helper(root.right, slate);
+            slate.remove(slate.size() - 1);
+        }
     }
 }
