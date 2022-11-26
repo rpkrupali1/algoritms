@@ -13,9 +13,7 @@ public class SymmetricTree {
     private static boolean helper(BinaryTreeNode left,BinaryTreeNode right){
         if(left==null && right==null)
             return true;
-        if(left==null || right==null)
-            return false;
-        if(!left.value.equals(right.value))
+        if(left==null || right==null || !left.value.equals(right.value))
             return false;
         boolean leftVal = helper(left.left,right.right);
         boolean rightVal = helper(left.right,right.left);
