@@ -30,7 +30,7 @@ public class PostOrderTraversalOfBinary {
         result.add(root.value);
     }
 
-    public static ArrayList<Integer> withoutTreeModification(BinaryTreeNode root){
+    public static ArrayList<Integer> stack_reverse(BinaryTreeNode root){
         ArrayList<Integer> result = new ArrayList<>();
         if(root==null)
             return result;
