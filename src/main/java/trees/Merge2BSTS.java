@@ -18,25 +18,18 @@ public class Merge2BSTS {
         ArrayList<Integer> finalArr = new ArrayList<>();
         int i =0, j=0;
         while (i< arr1.size() && j< arr2.size()){
-            if(arr1.get(i)<=arr2.get(j)){
-                finalArr.add(arr1.get(i));
-                i++;
-            }
-            else{
-                finalArr.add(arr2.get(j));
-                j++;
-            }
+            if(arr1.get(i)<=arr2.get(j))
+                finalArr.add(arr1.get(i++));
+            else
+                finalArr.add(arr2.get(j++));
         }
-        while (i< arr1.size()){
-            finalArr.add(arr1.get(i));
-            i++;
-        }
-        while (j < arr2.size()) {
-            finalArr.add(arr2.get(j));
-            j++;
-        }
-        BinaryTreeNode node = createTree(finalArr,0, finalArr.size()-1);
-        return node;
+        while (i< arr1.size())
+            finalArr.add(arr1.get(i++));
+
+        while (j < arr2.size())
+            finalArr.add(arr2.get(j++));
+
+        return createTree(finalArr,0, finalArr.size()-1);
     }
 
     private static void inOrder(BinaryTreeNode root, ArrayList<Integer> arr){
