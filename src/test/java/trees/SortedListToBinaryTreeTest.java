@@ -1,5 +1,6 @@
 package trees;
 
+import LinkedList.LinkedListNode;
 import common.ParentTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
