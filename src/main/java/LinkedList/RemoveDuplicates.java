@@ -10,7 +10,7 @@ public class RemoveDuplicates {
     public static LinkedListNode removeDuplicates(LinkedListNode node){
         LinkedListNode newNode = node;
         while (newNode.next!=null){
-            if(newNode.value==newNode.next.value)
+            if(newNode.value.equals(newNode.next.value))
                 newNode.next = newNode.next.next;
             else
                 newNode= newNode.next;

@@ -1,9 +1,9 @@
 package sort;
 
+import LinkedList.LinkedListNode;
 import common.ParentTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import sort.examples.LinkedListNode;
 import sort.examples.MergeKSortedLinkedList;
 
 import java.util.ArrayList;

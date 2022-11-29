@@ -1,6 +1,6 @@
 package common;
 
-import sort.examples.LinkedListNode;
+import LinkedList.LinkedListNode;
 import trees.BinaryTreeNode;
 
 import java.util.ArrayList;
