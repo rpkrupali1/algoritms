@@ -1,6 +1,6 @@
 package common;
 
-import sort.examples.LinkedListNode;
+import LinkedList.LinkedListNode;
 import trees.BinaryTreeNode;
 
 import java.util.ArrayList;
@@ -82,5 +82,15 @@ public class ParentTest {
             node = node.next;
         }
         System.out.println();
+    }
+
+
+    public ArrayList<Integer> getList(LinkedList.LinkedListNode node){
+        ArrayList<Integer> result = new ArrayList<>();
+        while (node!=null){
+            result.add(node.value);
+            node = node.next;
+        }
+        return result;
     }
 }
