@@ -23,11 +23,9 @@ import java.util.Arrays;
 public class CheckIfEulerianCycleExists {
     public static Boolean is_exists(Integer n, ArrayList<ArrayList<Integer>> edges) {
         int[] count = new int[n];
-        Arrays.fill(count,0);
         for (ArrayList<Integer> edge: edges) {
-            for (int vertex: edge) {
+            for (int vertex: edge)
                 count[vertex]++;
-            }
         }
 
         for (int i = 0; i < n; i++) {
