@@ -22,6 +22,14 @@ import java.util.Collections;
  */
 public class ConvertEdgeListToAdjacencyList {
     public static ArrayList<ArrayList<Integer>> getAList(int n, ArrayList<ArrayList<Integer>> edges){
+        ArrayList<ArrayList<Integer>> aL = getAdjecentList(n,edges);
+        for (ArrayList<Integer> list: aL )
+            Collections.sort(list);
+
+        return aL;
+    }
+
+    public static ArrayList<ArrayList<Integer>> getAdjecentList(int n, ArrayList<ArrayList<Integer>> edges){
         ArrayList<ArrayList<Integer>> aL = new ArrayList<>();
         for (int i = 0; i < n; i++)
             aL.add(new ArrayList<>());
@@ -30,9 +38,9 @@ public class ConvertEdgeListToAdjacencyList {
             aL.get(currentEdge.get(0)).add(currentEdge.get(1));
             aL.get(currentEdge.get(1)).add(currentEdge.get(0));
         }
-        for (ArrayList<Integer> list: aL )
-            Collections.sort(list);
 
         return aL;
     }
+
+
 }
