@@ -26,12 +26,23 @@ public class DFSTraversalOfAGraph {
         Arrays.fill(visited,false);
         for (int i = 0; i < n; i++) {
             if(!visited[i])
-                stack_helper(i,visited,aList);
+                stack_helper(i,visited);
         }
         return result;
     }
 
-    private static void stack_helper(int source,boolean[] visited, ArrayList<ArrayList<Integer>> aList){
+    public static ArrayList<Integer> recursive_approach(int n, ArrayList<ArrayList<Integer>> edges){
+        aList = ConvertEdgeListToAdjacencyList.getAdjecentList(n,edges);
+        boolean[] visited = new boolean[n];
+        Arrays.fill(visited,false);
+        for (int i = 0; i < n; i++) {
+            if(!visited[i])
+                recuse_helper(i,visited);
+        }
+        return result;
+    }
+
+    private static void stack_helper(int source,boolean[] visited){
         Stack<Integer> q = new Stack<>();
         q.push(source);
         visited[source] = true;
@@ -45,5 +56,17 @@ public class DFSTraversalOfAGraph {
                 }
             }
         }
+    }
+
+    private static void recuse_helper(int source,boolean[] visited){
+        result.add(source);
+        visited[source]=true;
+        for (int i : aList.get(source)){
+            if(!visited[i]){
+                visited[i]=true;
+                recuse_helper(i,visited);
+            }
+        }
+
     }
 }
