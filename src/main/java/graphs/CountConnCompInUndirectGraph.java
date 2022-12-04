@@ -34,6 +34,20 @@ public class CountConnCompInUndirectGraph {
        return count;
     }
 
+    public static int dfs(Integer n, ArrayList<ArrayList<Integer>> edges) {
+        int count=0;
+        ArrayList<ArrayList<Integer>> aL = ConvertEdgeListToAdjacencyList.getAdjecentList(n,edges);
+        boolean[] visited = new boolean[n];
+        Arrays.fill(visited,false);
+        for (int i = 0; i < n; i++) {
+            if(!visited[i]){
+                count++;
+                dfs_helper(i,aL,visited);
+            }
+        }
+        return count;
+    }
+
     private static void bfs_helper(int source, ArrayList<ArrayList<Integer>> aL, boolean[] visited){
         Queue<Integer> q = new LinkedList<>();
         q.add(source);
@@ -46,6 +60,14 @@ public class CountConnCompInUndirectGraph {
                     visited[tempnode]=true;
                 }
             }
+        }
+    }
+
+    private static void dfs_helper(int source, ArrayList<ArrayList<Integer>> aL, boolean[] visited){
+        visited[source] = true;
+        for (int temp : aL.get(source)) {
+            if(!visited[temp])
+                dfs_helper(temp,aL,visited);
         }
     }
 
