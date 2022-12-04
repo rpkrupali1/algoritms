@@ -16,7 +16,7 @@ import java.util.*;
          * [0, 1, 4, 2, 5, 3]
          * DFS starting from any other node will also be considered valid.
  */
-public class DFSTraversalOfAGraph {
+public class DFSTraversalOfAUndirectedGraph {
     private static final ArrayList<Integer> result = new ArrayList<>();
     private static ArrayList<ArrayList<Integer>> aList = new ArrayList<>(); //adjacent list
 

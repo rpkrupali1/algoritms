@@ -21,7 +21,7 @@ import java.util.Queue;
          * [0, 4, 2, 1, 3, 5]
          * BFS starting from another node will also be considered valid.
  */
-public class BFSTraversalOfAGraph {
+public class BFSTraversalOfAUndirectedGraph {
 
     private static final ArrayList<Integer> result = new ArrayList<>();
 
