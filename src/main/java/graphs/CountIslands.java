@@ -35,6 +35,19 @@ public class CountIslands {
         return counter;
     }
 
+    public static int dfs(ArrayList<ArrayList<Integer>> matrix) {
+        int counter = 0;
+        for (int i = 0; i < matrix.size(); i++) {
+            for (int j = 0; j < matrix.get(0).size(); j++) {
+                if(matrix.get(i).get(j)==1){
+                    dfs_helper(matrix,i,j);
+                    counter++;
+                }
+            }
+        }
+        return counter;
+    }
+
     private static void bfs_helper(ArrayList<ArrayList<Integer>> matrix, int row, int column){
         Queue<int[]> queue = new LinkedList<>();
         queue.add(new int[]{row,column});
@@ -53,6 +66,18 @@ public class CountIslands {
                     matrix.get(neighbourRow).set(neighbourColumn,0);
                 }
             }
+        }
+    }
+
+    private static void dfs_helper(ArrayList<ArrayList<Integer>> matrix, int row, int column){
+        matrix.get(row).set(column,0);
+        for (int i = 0; i < 8; i++) {
+            int nR = rows[i] + row;
+            int nC = columns[i] + column;
+            if(nR<0 || nR>=matrix.size()|| nC<0 || nC>=matrix.get(0).size())
+                continue;
+            if(matrix.get(nR).get(nC)!=0)
+                dfs_helper(matrix,nR,nC);
         }
     }
 }
