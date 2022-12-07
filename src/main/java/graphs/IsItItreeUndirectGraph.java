@@ -106,10 +106,8 @@ public class IsItItreeUndirectGraph {
                     visited[tempnode]=true;
                     parent[tempnode] = node;
                 }
-                else {
-                    if(tempnode != parent[node])
-                        return false; //cross edge
-                }
+                else if(tempnode != parent[node])
+                    return false; //cross edge
             }
         }
         return true;
