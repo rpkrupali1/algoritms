@@ -26,7 +26,7 @@ public class FindTownJudgeTest extends ParentTest {
         input.add(new ArrayList<>(List.of(2,3)));
         input.add(new ArrayList<>(List.of(3,1)));
         input.add(new ArrayList<>(List.of(3,2)));
-        int actual = FindTownJudge.bfs(4,input);
+        int actual = FindTownJudge.bfs(3,input);
         Assert.assertEquals(actual,-1);
     }
 

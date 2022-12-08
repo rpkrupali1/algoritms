@@ -23,6 +23,8 @@ import java.util.ArrayList;
  */
 public class FindTownJudge {
     public static int bfs(int n, ArrayList<ArrayList<Integer>> edges){
+        if(edges.size()<n-1)
+            return -1;
         ArrayList<ArrayList<Integer>> aL = new ArrayList<>();
         for (int i = 0; i < n ; i++) {
             aL.add(new ArrayList<>());
@@ -31,15 +33,16 @@ public class FindTownJudge {
         for(ArrayList<Integer> edge: edges)
             aL.get(edge.get(1)-1).add(edge.get(0)-1);
 
-        int counter=0;
-
-        for(ArrayList<Integer> trust: aL){
-            counter++;
-            if(trust.size()==n-1) {
-                return counter;
-            }
+        int judge=0, people=0, counter=0;
+        for (int i = 0; i < n; i++) {
+            if(aL.get(i).size()==n-1) {
+                counter=i+1;
+                judge++;
+            } else if (aL.get(i).size()==0)
+                people++;
         }
-
+        if(judge==1 && people==n-1)
+            return counter;
         return -1;
     }
 }
