@@ -30,4 +30,11 @@ public class FindTownJudgeTest extends ParentTest {
         Assert.assertEquals(actual,-1);
     }
 
+    @Test
+    public void test002(){
+        ArrayList<ArrayList<Integer>> input = new ArrayList<>();
+        int actual = FindTownJudge.bfs(1,input);
+        Assert.assertEquals(actual,1);
+    }
+
 }
