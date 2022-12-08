@@ -22,27 +22,17 @@ import java.util.ArrayList;
  * Output: -1
  */
 public class FindTownJudge {
-    public static int bfs(int n, ArrayList<ArrayList<Integer>> edges){
-        if(edges.size()<n-1)
-            return -1;
-        ArrayList<ArrayList<Integer>> aL = new ArrayList<>();
-        for (int i = 0; i < n ; i++) {
-            aL.add(new ArrayList<>());
+    public static int bfs(int n, ArrayList<ArrayList<Integer>> edges) {
+        int[] trusts = new int[n+1];
+        int[] trustedBy = new int[n+1];
+        for(ArrayList<Integer> list: edges){
+            trusts[list.get(0)]++;
+            trustedBy[list.get(1)]++;
         }
-
-        for(ArrayList<Integer> edge: edges)
-            aL.get(edge.get(1)-1).add(edge.get(0)-1);
-
-        int judge=0, people=0, counter=0;
-        for (int i = 0; i < n; i++) {
-            if(aL.get(i).size()==n-1) {
-                counter=i+1;
-                judge++;
-            } else if (aL.get(i).size()==0)
-                people++;
+        for (int i = 0; i <= n; i++) {
+            if(trusts[i]==0 && trustedBy[i]==n-1)
+                return i;
         }
-        if(judge==1 && people==n-1)
-            return counter;
         return -1;
     }
 }
