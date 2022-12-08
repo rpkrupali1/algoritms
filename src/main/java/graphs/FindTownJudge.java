@@ -29,7 +29,7 @@ public class FindTownJudge {
             trusts[list.get(0)]++;
             trustedBy[list.get(1)]++;
         }
-        for (int i = 0; i <= n; i++) {
+        for (int i = 1; i <= n; i++) {
             if(trusts[i]==0 && trustedBy[i]==n-1)
                 return i;
         }
