@@ -97,6 +97,7 @@ public class ShortestStringTransformation {
                     sb.setCharAt(i,ch);
                     //now check if new string is in words dictionary
                     int it = position.getOrDefault(sb.toString(),-1);
+                    System.out.println(it);
                     if(it != -1){
                         if(!visited[it]){
                             visited[it]=true;
