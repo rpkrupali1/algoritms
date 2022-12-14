@@ -50,6 +50,19 @@ public class CourseScheduleTest extends ParentTest {
     }
 
     @Test
+    public void test004(){
+        ArrayList<ArrayList<Integer>> input = new ArrayList<>();
+        input.add(new ArrayList<>(List.of(0,1)));
+        input.add(new ArrayList<>(List.of(1,0)));
+        ArrayList<Integer> actual = CourseSchedule.bfs(2,input);
+        print(actual);
+        ArrayList<ArrayList<Integer>> output = new ArrayList<>();
+        output.add(new ArrayList<>(List.of(-1)));
+        boolean expected = output.contains(actual);
+        Assert.assertTrue(expected);
+    }
+
+    @Test
     public void test006(){
         ArrayList<ArrayList<Integer>> input = new ArrayList<>();
         input.add(new ArrayList<>(List.of(0,1)));

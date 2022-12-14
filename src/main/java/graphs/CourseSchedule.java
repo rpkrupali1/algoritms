@@ -1,8 +1,6 @@
 package graphs;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * Course Schedule
@@ -31,15 +29,22 @@ public class CourseSchedule {
         for (int i = 0; i < n; i++) {
             aL.add(new ArrayList<>());
         }
+
+        ArrayList<Integer> in_degree = new ArrayList<>(Collections.nCopies(n,0));
+
         for(ArrayList<Integer> edge: edges )
-            aL.get(edge.get(0)).add(edge.get(1));
+            aL.get(edge.get(1)).add(edge.get(0));
 
         boolean[] visited = new boolean[n];
+
         for (int i = 0; i < n; i++) {
             if(!visited[i])
                 bfs_helper(i,visited);
         }
-        return result;
+
+        if(result.size()==n)
+            return result;
+        return new ArrayList<>(List.of(-1));
     }
 
     private static void bfs_helper(int source, boolean[] visited){
@@ -55,8 +60,9 @@ public class CourseSchedule {
                 }
             }
         }
-        result.add(source);
-        visited[source] = true;
-
+        if(!visited[source]){
+            result.add(source);
+            visited[source] = true;
+        }
     }
 }
