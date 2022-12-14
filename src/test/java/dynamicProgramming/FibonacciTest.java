@@ -23,4 +23,22 @@ public class FibonacciTest {
         int actual = dynamicProgramming.Fibonacci.recursive_memoized(2);
         Assert.assertEquals(actual,1);
     }
+
+    @Test
+    public void space_optimal_test000(){
+        int actual = dynamicProgramming.Fibonacci.space_optimal(4);
+        Assert.assertEquals(actual,3);
+    }
+
+    @Test
+    public void space_optimal_test001(){
+        int actual = dynamicProgramming.Fibonacci.space_optimal(1);
+        Assert.assertEquals(actual,1);
+    }
+
+    @Test
+    public void space_optimal_test002(){
+        int actual = dynamicProgramming.Fibonacci.space_optimal(2);
+        Assert.assertEquals(actual,1);
+    }
 }

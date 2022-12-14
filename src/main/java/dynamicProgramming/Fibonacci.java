@@ -31,4 +31,18 @@ public class Fibonacci {
         value.add(n,helper(n-1) + helper(n-2));
         return value.get(n);
     }
+
+    public static int space_optimal(int n){
+        if(n==0||n==1)
+            return n;
+        int super_prev = 0;
+        int prev = 1;
+        int current;
+        for (int i = 2; i <= n; i++) {
+            current = super_prev + prev;
+            super_prev = prev;
+            prev = current;
+        }
+        return prev;
+    }
 }

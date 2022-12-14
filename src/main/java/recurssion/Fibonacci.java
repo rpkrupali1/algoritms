@@ -25,12 +25,6 @@ public class Fibonacci {
         return recursive(n-1) + recursive(n-2);
     }
 
-    public int recursive_optimal(int n){
-        if( n==0 || n==1 )
-            return n;
-        return recursive(n-1) + recursive(n-2);
-    }
-
     /**
      * Time - O(n)
      * Space - O(1)
