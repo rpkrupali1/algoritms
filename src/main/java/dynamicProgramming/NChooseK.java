@@ -20,5 +20,25 @@ package dynamicProgramming;
  * Here the answer can be very big, find it modulo 109 + 7.
  */
 public class NChooseK {
+    public static int dynamic_recursion(int n, int k){
+        if(k>n)
+            return 0;
+        int[][] value = new int[n+1][k+1];
+        for (int i = 0; i <= n; i++)
+            value[i][0] = 1;
+
+
+        for (int i = 0; i <= k; i++)
+            value[i][i]=1;
+
+        return helper(n,k,value);
+    }
+
+    private static int helper(int n, int k, int[][] value){
+        if(value[n][k]!=0)
+            return value[n][k];
+        value[n][k]=helper(n-1,k,value) + helper(n-1,k-1,value);
+        return value[n][k];
+    }
 
 }
