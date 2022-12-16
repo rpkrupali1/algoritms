@@ -12,7 +12,7 @@ public class NQueenProblemTest extends ParentTest {
     @Test
     public void test000(){
         ArrayList<ArrayList<String>> actual = NQueenProblem.recursive(4);
-        printList2(actual);
+        printList(actual);
         ArrayList<ArrayList<String>> expected = new ArrayList<>();
         expected.add(new ArrayList<>(Arrays.asList("-q--", "---q", "q---", "--q-")));
         expected.add(new ArrayList<>(Arrays.asList("--q-", "q---", "---q", "-q--")));

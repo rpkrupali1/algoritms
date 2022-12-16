@@ -12,7 +12,7 @@ public class SubsetsWithDuplicatesTest extends ParentTest {
     @Test
     public void test000(){
         ArrayList<String> actual = SubsetsWithDuplicates.recursive_approach("aab");
-        printStrings(actual);
+        print(actual);
         ArrayList<String> expected = new ArrayList<>(Arrays.asList("aa", "", "ab", "a", "b", "aab"));
         Assert.assertEquals(actual,expected);
     }
@@ -20,7 +20,7 @@ public class SubsetsWithDuplicatesTest extends ParentTest {
     @Test
     public void test001(){
         ArrayList<String> actual = SubsetsWithDuplicates.recursive_approach("dc");
-        printStrings(actual);
+        print(actual);
         ArrayList<String> expected = new ArrayList<>(Arrays.asList("", "cd", "c", "d"));
         Assert.assertEquals(actual,expected);
     }
@@ -28,7 +28,7 @@ public class SubsetsWithDuplicatesTest extends ParentTest {
     @Test
     public void test002(){
         ArrayList<String> actual = SubsetsWithDuplicates.recursive_approach("fdsf");
-        printStrings(actual);
+        print(actual);
         ArrayList<String> expected = new ArrayList<>(Arrays.asList("dffs", "ff", "", "df", "d", "dff", "f", "fs", "ds", "dfs", "ffs", "s"));
         Assert.assertEquals(actual,expected);
     }
