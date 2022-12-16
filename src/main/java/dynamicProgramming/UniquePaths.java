@@ -23,12 +23,10 @@ package dynamicProgramming;
 public class UniquePaths {
     public static int iterative(int n , int m){
         int[][] table = new int[n][m];
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++)
             table[i][0]=1;
-        }
-        for (int i = 0; i < m; i++) {
+        for (int i = 0; i < m; i++)
             table[0][i]=1;
-        }
         int base = (int) Math.pow(10,9)+7;
         for (int i = 1; i < n; i++) {
             for (int j = 1; j < m; j++) {
