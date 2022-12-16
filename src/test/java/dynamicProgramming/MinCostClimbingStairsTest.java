@@ -1,0 +1,39 @@
+package dynamicProgramming;
+
+import common.ParentTest;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MinCostClimbingStairsTest extends ParentTest {
+
+    @Test
+    public void test000(){
+        ArrayList<Integer> input = new ArrayList<>(List.of(1,1,2));
+        int actual = MinCostClimbingStairs.iterative(input);
+        Assert.assertEquals(actual,1);
+    }
+
+    @Test
+    public void test001(){
+        ArrayList<Integer> input = new ArrayList<>(List.of(3,4));
+        int actual = MinCostClimbingStairs.iterative(input);
+        Assert.assertEquals(actual,3);
+    }
+
+    @Test
+    public void test002(){
+        ArrayList<Integer> input = new ArrayList<>(List.of(1, 1, 1, 1, 1));
+        int actual = MinCostClimbingStairs.iterative(input);
+        Assert.assertEquals(actual,2);
+    }
+
+    @Test
+    public void test003(){
+        ArrayList<Integer> input = new ArrayList<>(List.of(100, 1));
+        int actual = MinCostClimbingStairs.iterative(input);
+        Assert.assertEquals(actual,1);
+    }
+}
