@@ -7,22 +7,22 @@ import java.util.ArrayList;
 
 public class ParentTest {
     private static final ArrayList<Integer> result = new ArrayList<>();
-    public void print(ArrayList<Integer> arr){
-        for (Integer integer : arr) {
-            System.out.print(integer + " ");
+    public <E> void print(ArrayList<E> arr){
+        for (E element : arr) {
+            System.out.print(element + " ");
         }
     }
 
-    public void printStrings(ArrayList<String> arr){
-        for (String integer : arr) {
-            System.out.print(integer + " ");
-        }
-    }
+//    public void printStrings(ArrayList<String> arr){
+//        for (String integer : arr) {
+//            System.out.print(integer + " ");
+//        }
+//    }
 
-    public static void printList(ArrayList<ArrayList<Integer>>arr){
-        for (ArrayList<Integer> integers : arr) {
+    public static <E> void printList(ArrayList<ArrayList<E>>arr){
+        for (ArrayList<E> integers : arr) {
             System.out.print("[ ");
-            for (Integer integer : integers) {
+            for (E integer : integers) {
                 System.out.print(integer);
                 System.out.print(" ");
             }
@@ -31,17 +31,17 @@ public class ParentTest {
         }
     }
 
-    public static void printList2(ArrayList<ArrayList<String>>arr){
-        for (ArrayList<String> strings : arr) {
-            System.out.print("[ ");
-            for (String string : strings) {
-                System.out.print(string);
-                System.out.print(" ");
-            }
-            System.out.print("]");
-            System.out.println();
-        }
-    }
+//    public static void printList2(ArrayList<ArrayList<String>>arr){
+//        for (ArrayList<String> strings : arr) {
+//            System.out.print("[ ");
+//            for (String string : strings) {
+//                System.out.print(string);
+//                System.out.print(" ");
+//            }
+//            System.out.print("]");
+//            System.out.println();
+//        }
+//    }
 
     public void print(int[] arr){
         for (int j : arr) {
