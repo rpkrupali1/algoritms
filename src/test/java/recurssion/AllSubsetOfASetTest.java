@@ -11,7 +11,6 @@ public class AllSubsetOfASetTest extends ParentTest {
     @Test
     public void recursive_test000(){
         ArrayList<String> actual = AllSubsetOfASet.recursive("xy");
-        //printStrings(actual);
         print(actual);
         ArrayList<String> expected = new ArrayList<>(Arrays.asList("", "y", "x", "xy"));
         Assert.assertEquals(actual,expected);

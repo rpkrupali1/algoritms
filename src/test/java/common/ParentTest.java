@@ -13,12 +13,6 @@ public class ParentTest {
         }
     }
 
-//    public void printStrings(ArrayList<String> arr){
-//        for (String integer : arr) {
-//            System.out.print(integer + " ");
-//        }
-//    }
-
     public static <E> void printList(ArrayList<ArrayList<E>>arr){
         for (ArrayList<E> integers : arr) {
             System.out.print("[ ");
@@ -30,18 +24,6 @@ public class ParentTest {
             System.out.println();
         }
     }
-
-//    public static void printList2(ArrayList<ArrayList<String>>arr){
-//        for (ArrayList<String> strings : arr) {
-//            System.out.print("[ ");
-//            for (String string : strings) {
-//                System.out.print(string);
-//                System.out.print(" ");
-//            }
-//            System.out.print("]");
-//            System.out.println();
-//        }
-//    }
 
     public void print(int[] arr){
         for (int j : arr) {
