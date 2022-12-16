@@ -13,6 +13,20 @@ public class ParentTest {
         }
     }
 
+    public void print(int[] arr){
+        for (int j : arr) {
+            System.out.print(j + " ");
+        }
+    }
+
+    public void print(LinkedListNode node){
+        while (node!=null){
+            System.out.print(node.value + " ");
+            node = node.next;
+        }
+        System.out.println();
+    }
+
     public static <E> void printList(ArrayList<ArrayList<E>>arr){
         for (ArrayList<E> integers : arr) {
             System.out.print("[ ");
@@ -24,13 +38,6 @@ public class ParentTest {
             System.out.println();
         }
     }
-
-    public void print(int[] arr){
-        for (int j : arr) {
-            System.out.print(j + " ");
-        }
-    }
-
 
     public boolean isSorted(ArrayList<Integer> arr){
         for (int i = 0; i < arr.size() - 1; i++) {
@@ -57,15 +64,6 @@ public class ParentTest {
         }
         return result;
     }
-
-    public void print(LinkedListNode node){
-        while (node!=null){
-            System.out.print(node.value + " ");
-            node = node.next;
-        }
-        System.out.println();
-    }
-
 
     public ArrayList<Integer> getList(LinkedList.LinkedListNode node){
         ArrayList<Integer> result = new ArrayList<>();
