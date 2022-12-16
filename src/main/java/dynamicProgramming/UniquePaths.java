@@ -29,9 +29,10 @@ public class UniquePaths {
         for (int i = 0; i < m; i++) {
             table[0][i]=1;
         }
+        int base = (int) Math.pow(10,9)+7;
         for (int i = 1; i < n; i++) {
             for (int j = 1; j < m; j++) {
-                table[i][j] = table[i-1][j] + table[i][j-1];
+                table[i][j] = (table[i-1][j] + table[i][j-1])%base;
             }
         }
         return table[n-1][m-1];
