@@ -20,6 +20,25 @@ package dynamicProgramming;
  * Here the answer can be very big, find it modulo 109 + 7.
  */
 public class NChooseK {
+
+    public static int optimal_solution(int n, int k){
+        if(k>n)
+            return 0;
+        if(k==0||k==n)
+            return 1;
+        int[][] value = new int[2][k+1];
+        value[0][0]=1;
+        value[1][0]=1;
+        value[1][1]=1;
+        for (int i = 2; i <= n; i++) {
+            for (int j = 1; j <= Math.min(i,k); j++) {
+                value[i%2][j]= value[(i+1)%2][j-1] + value[(i+1)%2][j];
+            }
+            
+        }
+        return value[n%2][k];
+    }
+
     public static int dynamic_recursion(int n, int k){
         if(k>n)
             return 0;
