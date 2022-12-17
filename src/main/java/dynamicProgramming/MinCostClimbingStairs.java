@@ -25,20 +25,14 @@ import java.util.ArrayList;
  */
 public class MinCostClimbingStairs {
     public static int iterative(ArrayList<Integer> cost){
-        int result = 0 ;
-        int i=0;
-        while (i<= cost.size()-2){
-            int oneStep=cost.get(i);
-            int twoStep = cost.get(i+1);
-            if(oneStep>=twoStep){
-                result = result + twoStep;
-                i = i+2;
-            }
-            else {
-                result = result + oneStep;
-                i++;
-            }
+        int n = cost.size();
+        int[] steps = new int[n+2];
+        steps[0]=0;
+        steps[1]=cost.get(0);
+        cost.add(0);
+        for (int i = 2; i <= n+1; i++) {
+            steps[i] = Math.min(steps[i-1],steps[i-2])+cost.get(i-1);
         }
-        return result;
+        return steps[n+1];
     }
 }
