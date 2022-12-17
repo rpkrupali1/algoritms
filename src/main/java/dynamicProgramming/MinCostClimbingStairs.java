@@ -35,4 +35,17 @@ public class MinCostClimbingStairs {
         }
         return steps[n+1];
     }
+
+    public static int iterative_optimal(ArrayList<Integer> cost){
+        int n = cost.size();
+        int firstStep = 0;
+        int secondStep = 0;
+        int current = 0;
+        for (int i = 2; i <= n; i++) {
+            current = Math.min(firstStep+cost.get(i-1),secondStep+cost.get(i-2));
+            secondStep = firstStep;
+            firstStep = current;
+        }
+        return current;
+    }
 }
