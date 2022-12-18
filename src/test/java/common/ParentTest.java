@@ -13,8 +13,8 @@ public class ParentTest {
         }
     }
 
-    public void print(int[] arr){
-        for (int j : arr) {
+    public static <E> void print(E[] arr){
+        for (E j : arr) {
             System.out.print(j + " ");
         }
     }
