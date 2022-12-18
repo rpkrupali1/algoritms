@@ -2,6 +2,7 @@ package dynamicProgramming;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 /**
  * Given a variety of coin types defining a currency system,
@@ -24,7 +25,7 @@ import java.util.Arrays;
 public class MinimumCoins {
 
     public static Integer minimum_coins(ArrayList<Integer> coins, Integer value) {
-        // Write your code here.
+        Collections.sort(coins);
         int[] result = new int[value+1];
         Arrays.fill(result,Integer.MAX_VALUE);
         result[0] = 0;
