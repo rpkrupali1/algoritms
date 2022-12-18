@@ -26,7 +26,7 @@ public class IntersectionOfThreeSortedArrays {
        return output.stream().mapToInt(i->i).toArray();
     }
 
-    public int[] threeSorted(int[]arr1, int[]arr2, int[]arr3){
+    public Integer[] threeSorted(int[] arr1, int[] arr2, int[] arr3){
         ArrayList<Integer> output = new ArrayList<>();
         int i=0,j=0,k=0;
         while (i< arr1.length && j< arr2.length && k < arr3.length){
@@ -40,7 +40,14 @@ public class IntersectionOfThreeSortedArrays {
             } else
                 k++;
         }
-        return output.stream().mapToInt(n->n).toArray();
+
+        Integer[] result = new Integer[output.size()];
+        for (int l = 0; l < result.length; l++) {
+            result[l]=output.get(l);
+        }
+
+        //return output.stream().mapToInt(n->n).toArray();
+        return result;
     }
 
     /**
