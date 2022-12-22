@@ -1,4 +1,0 @@
-package dynamicProgramming
-
-class NumberOfWaysToMakeChange {
-}

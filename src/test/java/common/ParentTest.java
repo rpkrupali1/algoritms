@@ -4,10 +4,17 @@ import LinkedList.LinkedListNode;
 import trees.BinaryTreeNode;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ParentTest {
     private static final ArrayList<Integer> result = new ArrayList<>();
     public <E> void print(ArrayList<E> arr){
+        for (E element : arr) {
+            System.out.print(element + " ");
+        }
+    }
+
+    public <E> void print(List<E> arr){
         for (E element : arr) {
             System.out.print(element + " ");
         }
