@@ -35,23 +35,6 @@ public class Quartiles {
         result.add(q1);
         result.add(q2);
         result.add(q3);
-
-//        int middle = arr.size()/2;
-//        int q1=0,q2,q3=0;
-//        for (int i = 0; i < middle; i++) {
-//            q1 = q1 + arr.get(i);
-//        }
-//        result.add(q1/middle-1);
-//        q2 = arr.get(middle);
-//        if(arr.size()%2==0) {
-//            q2 = (q2 + arr.get(middle - 1)) / 2;
-//            q3 =  arr.get(middle);
-//        }
-//        result.add(q2);
-//        for (int i = middle+1; i < arr.size(); i++) {
-//            q3 = q3 + arr.get(i);
-//        }
-//        result.add(q3/2);
         return result;
     }
 
